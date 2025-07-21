@@ -1,0 +1,539 @@
+{
+  "datasets": {
+    "names": [
+      "ssWW_LL_mg5_madspin"
+    ],
+    "samples": [
+      "ssWWLL"
+    ],
+    "filesets": {
+      "ssWW_LL_mg5_madspin": {
+        "metadata": {
+          "sample": "ssWWLL",
+          "year": "2023_preBPix",
+          "isMC": "True",
+          "xsec": "0.03",
+          "nevents": "100000"
+        },
+        "files": [
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/nanov12_samples/MadSpin/WW_LL/ssWW_LL_madspin_nanov12_Run3Summer23wmLHEGS_merged.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/nanov12_samples/MadSpin/WW_TT/ssWW_TT_madspin_nanoAODv12_Run3Summer23wmLHEGS_merged.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_1/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_2/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_3/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_4/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_5/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_6/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_7/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_8/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_9/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_9/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_10/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_20/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_21/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_22/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_23/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_24/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_25/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_26/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_27/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_28/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_29/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_30/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_1/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_1/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_1/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_2/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_3/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_4/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_5/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_6/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_7/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_8/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_9/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_10/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_11/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_12/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_13/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_14/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_15/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_16/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_17/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_18/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_19/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_20/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root"
+        ]
+      }
+    },
+    "subsamples": {
+      "ssWWLL": {
+        "type": "StandardSelection",
+        "categories": {
+          "ssWWLL": [
+            {
+              "name": "passthrough",
+              "params": {},
+              "collection": "events",
+              "function": {
+                "name": "passthrough_f",
+                "module": "pocket_coffea.lib.cut_functions",
+                "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+                "f_hash": 8751164124814
+              },
+              "id": "passthrough__-7168665478838707447"
+            }
+          ]
+        },
+        "is_multidim": false,
+        "multidim_collection": null
+      }
+    }
+  },
+  "skim": [
+    {
+      "name": "nPVgood_1",
+      "params": {
+        "N": 1
+      },
+      "collection": "events",
+      "function": {
+        "name": "<lambda>",
+        "module": "pocket_coffea.lib.cut_functions",
+        "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+        "f_hash": 8751001757656
+      },
+      "id": "nPVgood_1__-1966979043790260389"
+    },
+    {
+      "name": "cut_Muon_min1_pt1_or_Electron_min1_pt1",
+      "params": {
+        "coll": [
+          "Muon",
+          "Electron"
+        ],
+        "nMin": [
+          1,
+          1
+        ],
+        "minpt": [
+          1,
+          1
+        ]
+      },
+      "collection": "events",
+      "function": {
+        "name": "cut_function",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/coffea_vbs_example/custom_cut_functions.py",
+        "f_hash": 8751001744698
+      },
+      "id": "cut_Muon_min1_pt1_or_Electron_min1_pt1__-7857153517728502199"
+    }
+  ],
+  "preselections": [
+    {
+      "name": "semileptonic_preselW",
+      "params": {
+        "W": true,
+        "pt_leading_electron": 20,
+        "pt_leading_muon": 20,
+        "nJet": 1,
+        "nFatJets": 1,
+        "nJet_with_FatJet": 1,
+        "met": 20
+      },
+      "collection": "events",
+      "function": {
+        "name": "semileptonic",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/coffea_vbs_example/custom_cut_functions.py",
+        "f_hash": 8751001745198
+      },
+      "id": "semileptonic_preselW__-471696042256250056"
+    },
+    {
+      "name": "VBS_jets_presel",
+      "params": {
+        "mass": 500,
+        "deltaEta": 2.5
+      },
+      "collection": "events",
+      "function": {
+        "name": "VBS_jets",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/coffea_vbs_example/custom_cut_functions.py",
+        "f_hash": 8751001744748
+      },
+      "id": "VBS_jets_presel__-7180557082991263948"
+    }
+  ],
+  "categories": {
+    "type": "StandardSelection",
+    "categories": {
+      "baseline": [
+        {
+          "name": "passthrough",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "passthrough_f",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751164124814
+          },
+          "id": "passthrough__-7168665478838707447"
+        }
+      ],
+      "SingleEle_plus_VBSjets": [
+        {
+          "name": "nElectronGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "ElectronGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nElectron",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999416
+          },
+          "id": "nElectronGood_1_pt0__-6463259260004341931"
+        }
+      ],
+      "SingleMuon_plus_VBSjets": [
+        {
+          "name": "nMuonGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "MuonGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nMuon",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999426
+          },
+          "id": "nMuonGood_1_pt0__-1855780165997376678"
+        }
+      ],
+      "SingleEle_plus_VBSjets_oneAK8_twoAK4": [
+        {
+          "name": "nCleanJets_eq2",
+          "params": {
+            "N": 2,
+            "coll": "CleanJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999346
+          },
+          "id": "nCleanJets_eq2__1855174518171234273"
+        },
+        {
+          "name": "nCleanFatJets_eq1",
+          "params": {
+            "N": 1,
+            "coll": "CleanFatJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999346
+          },
+          "id": "nCleanFatJets_eq1__4919453690880982051"
+        },
+        {
+          "name": "nElectronGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "ElectronGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nElectron",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999416
+          },
+          "id": "nElectronGood_1_pt0__-6463259260004341931"
+        }
+      ],
+      "SingleEle_plus_VBSjets_fourAK4": [
+        {
+          "name": "nCleanJets_eq4",
+          "params": {
+            "N": 4,
+            "coll": "CleanJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999346
+          },
+          "id": "nCleanJets_eq4__-9022184321053548323"
+        },
+        {
+          "name": "nElectronGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "ElectronGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nElectron",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999416
+          },
+          "id": "nElectronGood_1_pt0__-6463259260004341931"
+        }
+      ],
+      "SingleMuon_plus_VBSjets_oneAK8_twoAK4": [
+        {
+          "name": "nMuonGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "MuonGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nMuon",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999426
+          },
+          "id": "nMuonGood_1_pt0__-1855780165997376678"
+        },
+        {
+          "name": "nCleanFatJets_eq1",
+          "params": {
+            "N": 1,
+            "coll": "CleanFatJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999346
+          },
+          "id": "nCleanFatJets_eq1__4919453690880982051"
+        },
+        {
+          "name": "nCleanJets_eq2",
+          "params": {
+            "N": 2,
+            "coll": "CleanJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999346
+          },
+          "id": "nCleanJets_eq2__1855174518171234273"
+        }
+      ],
+      "SingleMuon_plus_VBSjets_fourAK4": [
+        {
+          "name": "nMuonGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "MuonGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nMuon",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999426
+          },
+          "id": "nMuonGood_1_pt0__-1855780165997376678"
+        },
+        {
+          "name": "nCleanJets_eq4",
+          "params": {
+            "N": 4,
+            "coll": "CleanJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8751163999346
+          },
+          "id": "nCleanJets_eq4__-9022184321053548323"
+        }
+      ]
+    },
+    "is_multidim": false,
+    "multidim_collection": null
+  },
+  "workflow": {
+    "name": "VBS_WV_Processor",
+    "workflow_options": {},
+    "srcfile": "/afs/cern.ch/user/l/ldellape/coffea_vbs_example/workflowVBS.py"
+  },
+  "weights": {
+    "ssWWLL": {
+      "bycategory": {
+        "baseline": [],
+        "SingleEle_plus_VBSjets": [],
+        "SingleMuon_plus_VBSjets": [],
+        "SingleEle_plus_VBSjets_oneAK8_twoAK4": [],
+        "SingleEle_plus_VBSjets_fourAK4": [],
+        "SingleMuon_plus_VBSjets_oneAK8_twoAK4": [],
+        "SingleMuon_plus_VBSjets_fourAK4": []
+      },
+      "inclusive": [
+        "genWeight",
+        "lumi",
+        "XS",
+        "pileup"
+      ]
+    }
+  },
+  "variations": {
+    "ssWWLL": {
+      "weights": {
+        "baseline": [],
+        "SingleEle_plus_VBSjets": [],
+        "SingleMuon_plus_VBSjets": [],
+        "SingleEle_plus_VBSjets_oneAK8_twoAK4": [],
+        "SingleEle_plus_VBSjets_fourAK4": [],
+        "SingleMuon_plus_VBSjets_oneAK8_twoAK4": [],
+        "SingleMuon_plus_VBSjets_fourAK4": []
+      },
+      "shape": {
+        "baseline": [],
+        "SingleEle_plus_VBSjets": [],
+        "SingleMuon_plus_VBSjets": [],
+        "SingleEle_plus_VBSjets_oneAK8_twoAK4": [],
+        "SingleEle_plus_VBSjets_fourAK4": [],
+        "SingleMuon_plus_VBSjets_oneAK8_twoAK4": [],
+        "SingleMuon_plus_VBSjets_fourAK4": []
+      }
+    }
+  },
+  "variables": {
+    "MuonGood_eta_1": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "MuonGood_pt_1": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "MuonGood_phi_1": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "nElectronGood": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "nMuonGood": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "nJets": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "nBJets": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    }
+  },
+  "columns": {
+    "ssWWLL": {
+      "baseline": [],
+      "SingleEle_plus_VBSjets": [],
+      "SingleMuon_plus_VBSjets": [],
+      "SingleEle_plus_VBSjets_oneAK8_twoAK4": [],
+      "SingleEle_plus_VBSjets_fourAK4": [],
+      "SingleMuon_plus_VBSjets_oneAK8_twoAK4": [],
+      "SingleMuon_plus_VBSjets_fourAK4": []
+    }
+  }
+}
