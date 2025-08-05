@@ -8,8 +8,6 @@
             "nevents" : "100000"
         },
         "files" : [
-            "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/nanov12_samples/MadSpin/WW_LL/ssWW_LL_madspin_nanov12_Run3Summer23wmLHEGS_merged.root",
-            "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/nanov12_samples/MadSpin/WW_TT/ssWW_TT_madspin_nanoAODv12_Run3Summer23wmLHEGS_merged.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_1/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_2/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_3/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",

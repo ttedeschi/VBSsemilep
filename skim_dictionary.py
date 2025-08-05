@@ -40,6 +40,20 @@ skim_dict = {
             "ptMin" : 1, 
             "nMin": 1,
         },
+    },
+    "ttsemilep" : {
+        "Muon" : {
+            "ptMin" : 1,
+            "nMin" : 1,
+        },
+        "Electron" : {
+            "ptMin" : 1,
+            "nMin" : 1, 
+        },
+        "Jet" : {
+            "ptMin" : 1, 
+            "nMin": 1,
+        },
     }
     
 }

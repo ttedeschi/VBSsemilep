@@ -9,6 +9,8 @@ from workflowVBS import VBS_WV_Processor
 from skim_dictionary import skim_dict
 from pocket_coffea.lib.weights.common import common_weights
 import cloudpickle
+from pocket_coffea.lib.columns_manager import ColOut
+
 import custom_cut_functions 
 
 cloudpickle.register_pickle_by_value(workflowVBS)
@@ -29,6 +31,7 @@ defaults.register_configuration_dir("config_dir", localdir+"/parameters")
 
 parameters = defaults.merge_parameters_from_files(default_parameters,
                                     f"{localdir}/parameters/object_presel.yaml",
+                                    f"{localdir}/parameters/btagging.yaml",
                                     update=True                                    
                                     )
 
@@ -51,22 +54,19 @@ cfg = Configurator(
                 [skim_dict["Wlep_V"]["Muon"]["nMin"], skim_dict["Wlep_V"]["Electron"]["nMin"]],
                 ["Muon", "Electron"]),
             ],
-    preselections = [semileptonic_preselW, VBS_jets_presel],
-    
+    #preselections = [VBS_jets_presel, Vjet_massW, semileptonic_preselW],
+    preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massW],
+    #preselections = [passthrough],
     categories= {
         "baseline" : [passthrough],
-        "SingleEle_plus_VBSjets" : [get_nElectron(1, coll="ElectronGood")],
-        "SingleMuon_plus_VBSjets" : [get_nMuon(1, coll="MuonGood")],   
-        "SingleEle_plus_VBSjets_oneAK8_twoAK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_eq(2, coll="CleanJets")],
-        "SingleEle_plus_VBSjets_fourAK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(4 , coll="CleanJets")],
-        "SingleMuon_plus_VBSjets_oneAK8_twoAK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_eq(2, coll="CleanJets")],
-        "SingleMuon_plus_VBSjets_fourAK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(4 , coll="CleanJets")],
+        "SingleEle_plus_VBSjets_oneAK8_twoAK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_min(2, coll="CleanJets")],
+        "SingleEle_plus_VBSjets_fourAK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJets")],
+        "SingleMuon_plus_VBSjets_oneAK8_twoAK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_min(2, coll="CleanJets")],
+        "SingleMuon_plus_VBSjets_fourAK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4 , coll="CleanJets")],
     },    
     
     weights_classes = common_weights,
-    
-    
-    # weights/variations tutti da controllare in base a quelli disponibili per 2023
+
     weights = {
         "common": {
             "inclusive": ["genWeight","lumi","XS",
@@ -94,11 +94,24 @@ cfg = Configurator(
 
 
    variables = {
-        **muon_hists(coll="MuonGood", pos=0),
-        **count_hist(name="nElectronGood", coll="ElectronGood",bins=3, start=0, stop=3),
-        **count_hist(name="nMuonGood", coll="MuonGood",bins=3, start=0, stop=3),
-        **count_hist(name="nJets", coll="CleanJets",bins=8, start=0, stop=8),
-        **count_hist(name="nBJets", coll="CleanFatJets",bins=8, start=0, stop=8),
-    }
 
+    },
+
+
+    # output definition 
+    workflow_options = {
+        "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet/"
+    },
+    columns = {
+        "common" : {
+            "inclusive" : [ColOut("ElectronGood", ["pt","eta", "phi"], flatten=False),
+                           ColOut("MuonGood", ["pt", "eta", "phi"], flatten=False),
+                           ColOut("CleanFatJet", ["pt", "eta", "phi", "tau1", "tau2", "tau21", "msoftdrop", "mass"], flatten=False),
+                           ColOut("CleanJet", ["pt", "eta", "phi"], flatten=False),
+                           ColOut("CleanJet_noVBS", ["pt", "eta", "phi"], flatten=False),
+                           ColOut("VBS_dijet_system", ["mass", "pt", "deltaEta"], flatten=False),         
+                           ],
+            "bycategory" : {},
+            },            
+    },
 )
