@@ -1,11 +1,11 @@
 object_preselection:
   Electron:
       pt: 0
-      eta: 4.5
+      eta: 2.5
       id: mvaIso_WP80
   Muon:
        pt: 0
-       eta: 4.5
+       eta: 2.5
        iso: 0.06
        id: tightId 
   Jet:
@@ -14,15 +14,14 @@ object_preselection:
     eta: 5.0
     jetId: 2
     btag:
-      wp: L
+      wp: M
   FatJet:
     dr_lepton: 0.8
     pt: 30
     eta: 5.0
     msd: 25
     jetId: 2
-    btag:
-      wp: M
+
 
 
 

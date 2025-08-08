@@ -10,7 +10,7 @@ skim_dict = {
          },
          "Jet" : {
              "ptMin" : 1,
-             "nMin" : 1,
+             "nMin" : 2,
          }
     },
     "Zlep_V" : {
@@ -42,6 +42,20 @@ skim_dict = {
         },
     },
     "ttsemilep" : {
+        "Muon" : {
+            "ptMin" : 1,
+            "nMin" : 1,
+        },
+        "Electron" : {
+            "ptMin" : 1,
+            "nMin" : 1, 
+        },
+        "Jet" : {
+            "ptMin" : 1, 
+            "nMin": 1,
+        },
+    },
+    "Wjets" : {
         "Muon" : {
             "ptMin" : 1,
             "nMin" : 1,

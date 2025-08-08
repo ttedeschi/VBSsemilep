@@ -4,7 +4,7 @@
             "sample" : "ssWWLL",
             "year" : "2023_preBPix",
             "isMC" : "True",
-            "xsec" : "0.03", 
+            "xsec" : "0.02143", 
             "nevents" : "100000"
         },
         "files" : [
@@ -61,7 +61,7 @@
             "sample" : "ssWWTT",
             "year" : "2023_preBPix",
             "isMC" : "True",
-            "xsec" : "0.03", 
+            "xsec" : "0.1589", 
             "nevents" : "100000"
         },
         "files" : [

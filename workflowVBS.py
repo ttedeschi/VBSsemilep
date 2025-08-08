@@ -24,9 +24,10 @@ class VBS_WV_Processor(BaseProcessorABC):
     def apply_object_preselection(self, variation):
         # here the functions from pocket_coffea.lib.objects must be called
         # passing the yaml file defined in ./parameters directory
-        if self._isMC:
+        if self._isMC and "2023" in self._year:
             self.events["Jet"] = jet_correction_correctionlib(self.events, "Jet", "AK4PFPuppi", "2023_Summer23", 'Summer23Prompt23_V2_MC') 
             self.events["FatJet"] = jet_correction_correctionlib(self.events, "FatJet", "AK8PFPuppi" , "2023_Summer23", 'Summer23Prompt23_V2_MC')
+       
         
         # mask the electrons and muons
         self.events["MuonGood"] = lepton_selection(self.events, "Muon", self.params)
@@ -34,9 +35,6 @@ class VBS_WV_Processor(BaseProcessorABC):
         tight_muons = self.events["MuonGood"]
         
         
-        print("**************")
-        print(f" mvaIso : {self.events.Electron.mvaIso}")
-        print(f" mvaIso_WP80 : {self.events.Electron.mvaIso_WP90}")
         tight_electron = self.events["ElectronGood"]
         self.events["LeptonGood"] = ak.concatenate((self.events.MuonGood, self.events.ElectronGood), axis=1)
         tight_leptons = self.events["LeptonGood"]
@@ -50,7 +48,6 @@ class VBS_WV_Processor(BaseProcessorABC):
             self.events, "Jet", self.params, self._year,  leptons_collection="LeptonGood"
         )
         print("*****************************************************************************************")
-        vector.register_awkward()
         
         # create collection of the two ak4 jets that return the greatest mass and remove them from the 
         # ak4 list in a new CleanJet_noVBS colleciton
@@ -69,14 +66,14 @@ class VBS_WV_Processor(BaseProcessorABC):
             "tau32"
         )
         
-        
-        
-        # the following to split the ttbar semileptonic 
-        self.events["BJetGood"] = btagging(
+        bjets_tagged = btagging(
             self.events["CleanJet"],
             self.params.btagging.working_point[self._year], 
-            wp = self.params.object_preselection.Jet.btag.wp,            
+            wp = self.params.object_preselection.Jet["btag"]["wp"],
         )
+        self.events["BJetGood"] = bjets_tagged[abs(bjets_tagged.eta) < 2.5]
+        print(f"bjets : {self.events.BJetGood.pt}")
+
         
         ''' non ci sono per 2023
         # now MET, checking for available corrections, if yes overwrite the collections
@@ -86,7 +83,7 @@ class VBS_WV_Processor(BaseProcessorABC):
         '''
         
         
-    # make the pairs with the ak4 jets collection, take the pair with the greates m_jj as VBS jets candidate
+    # make the pairs with the ak4 jets collection, take the pair with the greates m_jj as VBS dijet candidate
     def VBS_pair_candidate(self):
         ak4_cleanjets = self.events["CleanJet"]
         ak4_pairs = ak.combinations(ak4_cleanjets, 2, fields=["jet1", "jet2"])
@@ -97,12 +94,21 @@ class VBS_WV_Processor(BaseProcessorABC):
         sorted_ak4_idx = idx_pairs[sort_by_mass]
         best_pair = ak.firsts(sorted_ak4_pair)      
         best_idx_pair = ak.firsts(sorted_ak4_idx)    
+        jet1_pt = best_pair["jet1"].pt
+        jet2_pt = best_pair["jet2"].pt
+        jet2_higher_pt = jet2_pt > jet1_pt
+        jet1 = ak.where(jet2_higher_pt, best_pair["jet2"], best_pair["jet1"])
+        jet2 = ak.where(jet2_higher_pt, best_pair["jet1"], best_pair["jet2"])
+        idx1 = ak.where(jet2_higher_pt, best_idx_pair["idx2"], best_idx_pair["idx1"])
+        idx2 = ak.where(jet2_higher_pt, best_idx_pair["idx1"], best_idx_pair["idx2"])
         dijet = best_pair["jet1"] + best_pair["jet2"]
         vbs_dijet = ak.zip({
             "mass": dijet.mass,
             "pt": dijet.pt,
             "deltaEta": abs(best_pair["jet1"].eta - best_pair["jet2"].eta),
             "deltaPhi": best_pair["jet1"].phi - best_pair["jet2"].phi,
+            "pt1" : best_pair["jet1"].pt,
+            "pt2" : best_pair["jet2"].pt,
             "idx1": best_idx_pair["idx1"],
             "idx2": best_idx_pair["idx2"],
         })
@@ -112,7 +118,7 @@ class VBS_WV_Processor(BaseProcessorABC):
     
     
     # create the pair of jets candidate from W/Z boson, removing the 2 jets already in the "VBS_dijet_system".
-    # if more than two ak4 jets remain, take the pair with the sd mass closer to that of W
+    # if more than two ak4 jets remains, take the pair with the sd mass closer to that of W
     def V_pair_candidate(self):
         ak4_cleanjets = self.events["CleanJet"]
         mask = ~(

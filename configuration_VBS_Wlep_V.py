@@ -1,7 +1,7 @@
 from custom_cut_functions import *
 from pocket_coffea.utils.configurator import Configurator
 from pocket_coffea.lib.cut_definition import Cut
-from pocket_coffea.lib.cut_functions import get_nObj_min, get_HLTsel, get_nPVgood, goldenJson, eventFlags, get_nElectron, get_nMuon, get_nObj_eq
+from pocket_coffea.lib.cut_functions import get_nObj_min, get_HLTsel, get_nPVgood, goldenJson, eventFlags, get_nElectron, get_nMuon, get_nObj_eq, count_objects_eq
 from pocket_coffea.parameters.cuts import passthrough
 from pocket_coffea.parameters.histograms import *
 import workflowVBS
@@ -38,12 +38,16 @@ parameters = defaults.merge_parameters_from_files(default_parameters,
 
 # **************************************************************** #
 # ************* MAIN CONFIGURATION ******************************* #
+parquet = False
 cfg = Configurator(
     parameters=parameters,
     datasets = {
-        "jsons" : [f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json"],
+        "jsons" : [f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
+                   f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
+                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json"
+                   ],
         "filter" : {
-            "samples" : ["ssWWLL"],
+            "samples" : ["ssWWTT", "ssWWLL", "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8"],
         }
         }, 
     workflow=VBS_WV_Processor,
@@ -53,16 +57,29 @@ cfg = Configurator(
                 [skim_dict["Wlep_V"]["Muon"]["ptMin"],skim_dict["Wlep_V"]["Electron"]["ptMin"]], 
                 [skim_dict["Wlep_V"]["Muon"]["nMin"], skim_dict["Wlep_V"]["Electron"]["nMin"]],
                 ["Muon", "Electron"]),
+            get_nObj_min(skim_dict["Wlep_V"]["Jet"]["nMin"], skim_dict["Wlep_V"]["Jet"]["ptMin"], "Jet"),
             ],
-    #preselections = [VBS_jets_presel, Vjet_massW, semileptonic_preselW],
-    preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massW],
+    
+    preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSide, Vjet_massW],
     #preselections = [passthrough],
     categories= {
         "baseline" : [passthrough],
-        "SingleEle_plus_VBSjets_oneAK8_twoAK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_min(2, coll="CleanJets")],
-        "SingleEle_plus_VBSjets_fourAK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJets")],
-        "SingleMuon_plus_VBSjets_oneAK8_twoAK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_min(2, coll="CleanJets")],
-        "SingleMuon_plus_VBSjets_fourAK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4 , coll="CleanJets")],
+        "SingleEle_AK8" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_eq(0, coll="BJetGood")],
+        "SingleEle_AK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJets"), get_nObj_eq(0, coll="BJetGood")],
+        "SingleMuon_AK8" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_eq(0, coll="BJetGood")],
+        "SingleMuon_AK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4 , coll="CleanJets"), get_nObj_eq(0, coll="BJetGood")],
+        
+        # ttbar
+        "SingleEle_AK8_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1 , coll="CleanFatJets"), get_nObj_min(2, coll="BJetGood")],
+        "SingleEle_AK4_bje_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJets"), get_nObj_min(2, coll="BJetGood")],
+        "SingleMuon_AK8_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1 , coll="CleanFatJets"), get_nObj_eq(2, coll="BJetGood")],
+        "SingleMuon_AK4_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4, coll="CleanJets"), get_nObj_min(2, coll="BJetGood")],
+        
+        #WtoLNu-XJets
+        "SingleEle_AK8_AK4_sideL_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wjet_sideL],
+        "SingleEle_AK8_AK4_sideR_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wjet_sideR],
+        "SingleMuon_AK8_AK4_sideL_Wjets" : [get_nMuon(1, coll="MuonGood"), Wjet_sideL],
+        "SingleMuon_AK8_AK4_sideR_Wjets" : [get_nMuon(1, coll="MuonGood"), Wjet_sideR],
     },    
     
     weights_classes = common_weights,
@@ -98,20 +115,19 @@ cfg = Configurator(
     },
 
 
-    # output definition 
-    workflow_options = {
-        "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet/"
-    },
-    columns = {
-        "common" : {
-            "inclusive" : [ColOut("ElectronGood", ["pt","eta", "phi"], flatten=False),
-                           ColOut("MuonGood", ["pt", "eta", "phi"], flatten=False),
-                           ColOut("CleanFatJet", ["pt", "eta", "phi", "tau1", "tau2", "tau21", "msoftdrop", "mass"], flatten=False),
-                           ColOut("CleanJet", ["pt", "eta", "phi"], flatten=False),
-                           ColOut("CleanJet_noVBS", ["pt", "eta", "phi"], flatten=False),
-                           ColOut("VBS_dijet_system", ["mass", "pt", "deltaEta"], flatten=False),         
-                           ],
-            "bycategory" : {},
-            },            
-    },
+   # workflow_options = {
+   #     "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet/"
+   # },
+   # columns = {
+   #     "common" : {
+   #         "inclusive" : [ColOut("ElectronGood", ["pt","eta", "phi"], flatten=False),
+   #                        ColOut("MuonGood", ["pt", "eta", "phi"], flatten=False),
+   #                        ColOut("CleanFatJet", ["pt", "eta", "phi", "tau1", "tau2", "tau21", "msoftdrop", "mass"], flatten=False),
+   #                        ColOut("CleanJet", ["pt", "eta", "phi"], flatten=False),
+   #                     #   ColOut("CleanJet_noVBS", ["pt", "eta", "phi"], flatten=False),
+   #                      #  ColOut("VBS_dijet_system", ["mass", "pt", "deltaEta"], flatten=False),         
+   #                        ],
+   #         "bycategory" : {},
+   #         },            
+    #},
 )
