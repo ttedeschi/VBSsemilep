@@ -24,10 +24,6 @@ from pocket_coffea.parameters import defaults
 default_parameters = defaults.get_default_parameters()
 defaults.register_configuration_dir("config_dir", localdir+"/parameters")
 
-# categories...
-# 1- electron (tight) + VBS jets
-# 2- muon (tight) + VBS jets
-
 
 parameters = defaults.merge_parameters_from_files(default_parameters,
                                     f"{localdir}/parameters/object_presel.yaml",
@@ -47,7 +43,7 @@ cfg = Configurator(
                    f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json"
                    ],
         "filter" : {
-            "samples" : ["ssWWTT", "ssWWLL", "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8"],
+            "samples" : ["ssWWTT"],
         }
         }, 
     workflow=VBS_WV_Processor,
