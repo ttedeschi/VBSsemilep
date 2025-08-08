@@ -19,7 +19,11 @@ def VBS_topology(events, params, year, sample, **kwargs):
         (events.VBS_dijet_system.pt1 > params["pt_leadingJet"])
         &
         (
-            (events.nCleanFatJets == 1) |
+            (
+                (events.nCleanFatJets == 1) &
+                (events.nCleanJets >= params["nJet_with_FatJet"])
+            )
+            |
             (
                 (events.nCleanJets >= params["nJet"]) &
                 (events.nCleanFatJets == 0)
@@ -34,6 +38,7 @@ VBS_jets_presel = Cut(
         "deltaEta" : 2.5,
         "pt_leadingJet" : 50,
         "nJet" : 4,
+        "nJet_with_FatJet" : 2,
     },
     function=VBS_topology,
 )
@@ -43,22 +48,17 @@ VBS_jets_presel = Cut(
 
 
 #############################################################
-# semileptonic, requirements on leptons and/or MET
+# semileptonic, requirements on leptons and/or MET          #
 #############################################################
 def semileptonic(events, params, year, sample, **kwargs):
-    print(f" clean fatjet pt: {events.CleanFatJet.pt}")
     single_electron = events.nElectronGood == 1
     single_muon = events.nMuonGood == 1
     double_electron = events.nElectronGood == 2
     double_muon = events.nMuonGood == 2
-    print(f" MET: {events.MET.pt}")
-    print(f" Muon: {events.MuonGood.pt}")
-    print(f" Electron: {events.ElectronGood.pt}")
     if params["W"] is True:
-        print("ok W")
         mask = (
                 (   single_electron
-                  & (ak.firsts(events.LeptonGood.pt)> params["pt_leading_electron"])
+                  & (ak.firsts(events.LeptonGood.pt) > params["pt_leading_electron"])
                   & (ak.firsts(events.LeptonGood.eta) < params["eta_max_lep"])
                   & (events.MET.pt > params["met_electron"])
                 )
@@ -140,8 +140,6 @@ semileptonic_preselDY = Cut(
 # V jet mass from AK8 or 2AK4 (pair wuth the mass closer to W/Z mass)
 #############################################################
 def Vjet_mass(events, params, year, sample, **kwargs):
-    print(f" again fj: {events.CleanFatJet.mass}")
-    print(f" mass : {events.CleanFatJet.mass}")
     fj_mask = (
     (
         (events.CleanFatJet.msoftdrop > params["mass_min"]) &
@@ -181,14 +179,10 @@ Vjet_massW = Cut(
 
 
 
-
-
 #############################################################
 # number of b-tagged (central) jets (for ttbar etc.)        #
 #############################################################
 def Bjets_presel(events, params, year, sample, **kwargs):
-    print(f"b jets : {events.nBJetGood}")
-    print()
     b_mask = (events["nBJetGood"] >= params["nBjets"])
     return ak.where(ak.is_none(b_mask), False, b_mask)
 Bjets_presel = Cut(
@@ -203,14 +197,11 @@ Bjets_presel = Cut(
 
 
 
-
-
-#############################################################
-# v-jet mass outside Vjet_mass (contamination from W+jets etc.)            
-#############################################################
+#################################################################
+# v-jet mass outside Vjet_mass (contamination from W+jets etc.) #           
+#################################################################
+# this always return true but split the sample
 def Vjet_massSide(events, params, year, sample, **kwargs):
-    print(f" again fj: {events.CleanFatJet.mass}")
-    print(f" mass : {events.CleanFatJet.mass}")
     if params.get("side", True):
         left_band_jets = (
             (   (ak.any(events.CleanFatJet.msoftdrop < params["mass_min"], axis=1)) &
@@ -236,8 +227,7 @@ def Vjet_massSide(events, params, year, sample, **kwargs):
         mask = left_band_jets | right_band_jets
         events["Wjets_sideL"] = left_band_jets
         events["Wjets_sideR"] = right_band_jets
-        print(f"sideL: {events.Wjets_sideL}")
-        return ak.where(ak.is_none(mask), False, mask)
+        return ak.ones_like(mask, dtype=bool)
 Vjet_massSide = Cut(
     name="Vjet_massSide",
     params={
@@ -271,8 +261,6 @@ Wjet_sideR = Cut(
     params={},
     function=sideR,
 )
-
-
 
 
 

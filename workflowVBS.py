@@ -72,7 +72,6 @@ class VBS_WV_Processor(BaseProcessorABC):
             wp = self.params.object_preselection.Jet["btag"]["wp"],
         )
         self.events["BJetGood"] = bjets_tagged[abs(bjets_tagged.eta) < 2.5]
-        print(f"bjets : {self.events.BJetGood.pt}")
 
         
         ''' non ci sono per 2023
@@ -112,7 +111,6 @@ class VBS_WV_Processor(BaseProcessorABC):
             "idx1": best_idx_pair["idx1"],
             "idx2": best_idx_pair["idx2"],
         })
-        print(f" dijet mass: {vbs_dijet.mass}")
         self.events["VBS_dijet_system"] = vbs_dijet
         
     
@@ -143,7 +141,6 @@ class VBS_WV_Processor(BaseProcessorABC):
             "idx2" : ak.local_index(clean_jets_no_vbs[mask_eq2], axis=1)[:,1],
         }
         )
-        print(ak4_eq2)
         
         # more than two ak4 remaining        
         jets_gt2 = clean_jets_no_vbs[mask_gt2]
@@ -165,7 +162,6 @@ class VBS_WV_Processor(BaseProcessorABC):
             "idx1": best_idx_gt2["idx1"],
             "idx2": best_idx_gt2["idx2"],
         })
-        print(result_gt2)
         n_events = len(self.events)
         full_result = [None] * n_events 
 
@@ -180,7 +176,6 @@ class VBS_WV_Processor(BaseProcessorABC):
                 full_result[i] = val
 
         self.events["V_dijet_candidate"] = ak.Array(full_result)
-        print(f" V_dijet_candidate mass: {self.events.V_dijet_candidate.mass}")
         
         
     # prepare the transverse mass of electron/muon + MET
@@ -207,9 +202,3 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.events["nCleanFatJets"] = ak.num(self.events.CleanFatJet)
         self.events["nCleanJets"] = ak.num(self.events.CleanJet)
         self.events["nBJetGood"] = ak.num(self.events.BJetGood)
-        print("**************************")
-        print(f" n. good leptons: {self.events.nLeptonGood}")
-        print(f" n. good muons: {self.events.nMuonGood}")
-        print(f" n. good electrons: {self.events.nElectronGood}")
-        print(f" n. clean jets {self.events.nCleanJets}")
-        print(f" n. clean fatjets {self.events.nCleanFatJets}")

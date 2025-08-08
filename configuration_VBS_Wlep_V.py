@@ -39,11 +39,11 @@ cfg = Configurator(
     parameters=parameters,
     datasets = {
         "jsons" : [f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
-                   f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json"
+                   #f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
+                  # f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json"
                    ],
         "filter" : {
-            "samples" : ["ssWWTT"],
+            "samples" : ["ssWWTT", "ssWWLL", "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8"],
         }
         }, 
     workflow=VBS_WV_Processor,
@@ -56,8 +56,19 @@ cfg = Configurator(
             get_nObj_min(skim_dict["Wlep_V"]["Jet"]["nMin"], skim_dict["Wlep_V"]["Jet"]["ptMin"], "Jet"),
             ],
     
+    # signal 
     preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSide, Vjet_massW],
+    
+    # ttbar CR
+    #preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSide]
+    
+    # Wjets CR
+    #preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSide]
+    
+    
     #preselections = [passthrough],
+    # AK8 --> V boson from FatJet
+    # AK4 --> V boson from 2 Jets
     categories= {
         "baseline" : [passthrough],
         "SingleEle_AK8" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_eq(0, coll="BJetGood")],
@@ -72,10 +83,10 @@ cfg = Configurator(
         "SingleMuon_AK4_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4, coll="CleanJets"), get_nObj_min(2, coll="BJetGood")],
         
         #WtoLNu-XJets
-        "SingleEle_AK8_AK4_sideL_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wjet_sideL],
-        "SingleEle_AK8_AK4_sideR_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wjet_sideR],
-        "SingleMuon_AK8_AK4_sideL_Wjets" : [get_nMuon(1, coll="MuonGood"), Wjet_sideL],
-        "SingleMuon_AK8_AK4_sideR_Wjets" : [get_nMuon(1, coll="MuonGood"), Wjet_sideR],
+    #    "SingleEle_AK8_AK4_sideL_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wjet_sideL],
+    #    "SingleEle_AK8_AK4_sideR_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wjet_sideR],
+    #    "SingleMuon_AK8_AK4_sideL_Wjets" : [get_nMuon(1, coll="MuonGood"), Wjet_sideL],
+    #    "SingleMuon_AK8_AK4_sideR_Wjets" : [get_nMuon(1, coll="MuonGood"), Wjet_sideR],
     },    
     
     weights_classes = common_weights,

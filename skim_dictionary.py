@@ -24,7 +24,7 @@ skim_dict = {
          },
          "Jet" : {
              "ptMin" : 1,
-             "nMin" : 1,
+             "nMin" : 2,
          }
     },
     "DY" : {
@@ -38,7 +38,7 @@ skim_dict = {
         },
         "Jet" : {
             "ptMin" : 1, 
-            "nMin": 1,
+            "nMin": 2,
         },
     },
     "ttsemilep" : {
@@ -52,7 +52,7 @@ skim_dict = {
         },
         "Jet" : {
             "ptMin" : 1, 
-            "nMin": 1,
+            "nMin": 2,
         },
     },
     "Wjets" : {
@@ -66,7 +66,7 @@ skim_dict = {
         },
         "Jet" : {
             "ptMin" : 1, 
-            "nMin": 1,
+            "nMin": 2,
         },
     }
     
