@@ -104,3 +104,7 @@
 [INFO    ] Total number of events: 200000
 [INFO    ] Working on datasets: ['ssWW_LL_mg5_madspin', 'ssWW_TT_mg5_madspin', 'TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8_2023_postBPix', 'TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8_2023_preBPix', 'WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_postBPix', 'WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix']
 [INFO    ] Total number of events: 145367952
+[INFO    ] Working on datasets: ['ssWW_LL_mg5_madspin', 'ssWW_TT_mg5_madspin']
+[INFO    ] Total number of events: 200000
+[INFO    ] Working on datasets: ['ssWW_LL_mg5_madspin', 'ssWW_TT_mg5_madspin']
+[INFO    ] Total number of events: 200000

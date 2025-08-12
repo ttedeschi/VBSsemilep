@@ -96,6 +96,7 @@ class VBS_WV_Processor(BaseProcessorABC):
             "subjet2": sj_2,
             "zg" : abs(sj_1.pt - sj_2.pt)/self.events.CleanFatJet.pt,            
         })
+        print(f" zg: {clean_subjets.zg}")
         self.events["CleanSubJet_pair"] = clean_subjets
 
         
