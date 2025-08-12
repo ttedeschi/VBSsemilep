@@ -34,7 +34,7 @@ def VBS_topology(events, params, year, sample, **kwargs):
 VBS_jets_presel = Cut(
     name="VBS_jets_presel",
     params = {
-        "mass" : 500,
+        "mass" : 400,
         "deltaEta" : 2.5,
         "pt_leadingJet" : 50,
         "nJet" : 4,
@@ -59,14 +59,12 @@ def semileptonic(events, params, year, sample, **kwargs):
         mask = (
                 (   single_electron
                   & (ak.firsts(events.LeptonGood.pt) > params["pt_leading_electron"])
-                  & (ak.firsts(events.LeptonGood.eta) < params["eta_max_lep"])
                   & (events.MET.pt > params["met_electron"])
                 )
                 | 
                 (
                    single_muon
                    & (ak.firsts(events.LeptonGood.pt) > params["pt_leading_muon"])
-                   & (ak.firsts(events.LeptonGood.eta) < params["eta_max_lep"])
                    & (events.MET.pt > params["met_muon"])
                 )
         )
@@ -97,8 +95,8 @@ semileptonic_preselW = Cut(
         "nJet" : 4, 
         "nFatJets" : 1,
         "nJet_with_FatJet" : 2,
-        "met_electron" : 90,
-        "met_muon" : 40,
+        "met_electron" : 30,
+        "met_muon" : 30,
     },
     function = semileptonic,
 ) 
@@ -148,9 +146,8 @@ def Vjet_mass(events, params, year, sample, **kwargs):
     |
     (
            (events.V_dijet_candidate.mass > params["mass_min"]) &
-           (events.V_dijet_candidate.mass < params["mass_max"]) &
-           (events.nCleanJets >= params["nJet_min"])
-       )
+           (events.V_dijet_candidate.mass < params["mass_max"]) 
+    )
     )
     mask = ak.any(fj_mask, axis=1)
     return ak.where(ak.is_none(mask), False, mask)
@@ -234,7 +231,7 @@ Vjet_massSide = Cut(
         "VV" : True,
         "side" : True,
         "mass_min" : 110,
-        "mass_max" : 70,
+        "mass_max" : 60,
         "nJet_min" : 4,
     },
     function=Vjet_massSide,
@@ -251,6 +248,13 @@ def sideL(events, params, year, sample, **kwargs):
 def sideR(events, params, year, sample, **kwargs):
     mask = (events.Wjets_sideR == True)
     return ak.where(ak.is_none(mask), False, mask)
+def Vmass(events, params, year, sample, **kwargs):
+    mask = (
+        (events.Wjets_sideL == False) & 
+        (events.Wjets_sideR == False)
+        )
+    return ak.where(ak.is_none(mask), False, mask)
+
 Wjet_sideL = Cut(
     name="Wjet_sideL",
     params = {},
@@ -260,6 +264,11 @@ Wjet_sideR = Cut(
     name="Wjet_sideR",
     params={},
     function=sideR,
+)
+Wjet_mass = Cut(
+    name="Wjet_mass",
+    params = {},
+    function=Vmass,
 )
 
 
@@ -279,14 +288,6 @@ Wtransverse_mass_presel = Cut(
 )
 #############################################################
 #############################################################
-
-
-
-
-
-
-
-
 
 
 

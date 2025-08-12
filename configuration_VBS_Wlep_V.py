@@ -39,25 +39,25 @@ cfg = Configurator(
     parameters=parameters,
     datasets = {
         "jsons" : [f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
-                   #f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
-                  # f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json"
+                 #  f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json"
                    ],
         "filter" : {
             "samples" : ["ssWWTT", "ssWWLL", "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8"],
         }
         }, 
     workflow=VBS_WV_Processor,
-     skim = [
+    skim = [
             get_nPVgood(1), 
             get_nObj_min_or(
                 [skim_dict["Wlep_V"]["Muon"]["ptMin"],skim_dict["Wlep_V"]["Electron"]["ptMin"]], 
                 [skim_dict["Wlep_V"]["Muon"]["nMin"], skim_dict["Wlep_V"]["Electron"]["nMin"]],
                 ["Muon", "Electron"]),
-            get_nObj_min(skim_dict["Wlep_V"]["Jet"]["nMin"], skim_dict["Wlep_V"]["Jet"]["ptMin"], "Jet"),
             ],
     
-    # signal 
-    preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSide, Vjet_massW],
+    # signal
+    # Vjet_massSide always return true, flag for Wjets signal and bkg 
+    preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSide],
     
     # ttbar CR
     #preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSide]
@@ -71,10 +71,10 @@ cfg = Configurator(
     # AK4 --> V boson from 2 Jets
     categories= {
         "baseline" : [passthrough],
-        "SingleEle_AK8" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_eq(0, coll="BJetGood")],
-        "SingleEle_AK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJets"), get_nObj_eq(0, coll="BJetGood")],
-        "SingleMuon_AK8" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_eq(0, coll="BJetGood")],
-        "SingleMuon_AK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4 , coll="CleanJets"), get_nObj_eq(0, coll="BJetGood")],
+        "SingleEle_AK8" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_eq(0, coll="BJetGood"), Wjet_mass],
+        "SingleEle_AK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJets"), get_nObj_eq(0, coll="BJetGood"), Wjet_mass],
+        "SingleMuon_AK8" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJets"), get_nObj_eq(0, coll="BJetGood"), Wjet_mass],
+        "SingleMuon_AK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4 , coll="CleanJets"), get_nObj_eq(0, coll="BJetGood"), Wjet_mass],
         
         # ttbar
         "SingleEle_AK8_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1 , coll="CleanFatJets"), get_nObj_min(2, coll="BJetGood")],
@@ -82,11 +82,11 @@ cfg = Configurator(
         "SingleMuon_AK8_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1 , coll="CleanFatJets"), get_nObj_eq(2, coll="BJetGood")],
         "SingleMuon_AK4_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4, coll="CleanJets"), get_nObj_min(2, coll="BJetGood")],
         
-        #WtoLNu-XJets
-    #    "SingleEle_AK8_AK4_sideL_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wjet_sideL],
-    #    "SingleEle_AK8_AK4_sideR_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wjet_sideR],
-    #    "SingleMuon_AK8_AK4_sideL_Wjets" : [get_nMuon(1, coll="MuonGood"), Wjet_sideL],
-    #    "SingleMuon_AK8_AK4_sideR_Wjets" : [get_nMuon(1, coll="MuonGood"), Wjet_sideR],
+        #WtoLNu-XJets (check contamination in the jet mass window)
+        "SingleEle_AK8_AK4_sideL_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wjet_sideL],
+        "SingleEle_AK8_AK4_sideR_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wjet_sideR],
+        "SingleMuon_AK8_AK4_sideL_Wjets" : [get_nMuon(1, coll="MuonGood"), Wjet_sideL],
+        "SingleMuon_AK8_AK4_sideR_Wjets" : [get_nMuon(1, coll="MuonGood"), Wjet_sideR],
     },    
     
     weights_classes = common_weights,
@@ -122,19 +122,24 @@ cfg = Configurator(
     },
 
 
-   # workflow_options = {
-   #     "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet/"
-   # },
-   # columns = {
-   #     "common" : {
-   #         "inclusive" : [ColOut("ElectronGood", ["pt","eta", "phi"], flatten=False),
-   #                        ColOut("MuonGood", ["pt", "eta", "phi"], flatten=False),
-   #                        ColOut("CleanFatJet", ["pt", "eta", "phi", "tau1", "tau2", "tau21", "msoftdrop", "mass"], flatten=False),
-   #                        ColOut("CleanJet", ["pt", "eta", "phi"], flatten=False),
-   #                     #   ColOut("CleanJet_noVBS", ["pt", "eta", "phi"], flatten=False),
-   #                      #  ColOut("VBS_dijet_system", ["mass", "pt", "deltaEta"], flatten=False),         
-   #                        ],
-   #         "bycategory" : {},
-   #         },            
-    #},
+    workflow_options = {
+        "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet/"
+    },
+    columns = {
+        "common" : {
+            "inclusive" : [ColOut("ElectronGood", ["pt","eta", "phi"], flatten=False),
+                           ColOut("MuonGood", ["pt", "eta", "phi"], flatten=False),
+                           ColOut("CleanFatJet", ["pt", "eta", "phi", "tau1", "tau2", "tau21", "msoftdrop", "mass"], flatten=False),
+                           ColOut("CleanJet", ["pt", "eta", "phi"], flatten=False),
+                           ColOut("CleanJet_noVBS", ["pt", "eta", "phi"], flatten=False),
+                           ColOut("VBS_dijet_system", ["mass", "pt", "deltaEta"], flatten=False),    
+                           ColOut("V_dijet_candidate", ["mass", "pt", "deltaEta"], flatten=False),  
+                           ColOut("events", ["zepp_ele", "zepp_muon", "zepp_lep"], flatten=False),
+                           ColOut("events", ["MT_mu_miss", "MT_ele_miss", "MT_lep_miss"], flatten=False),
+                           ColOut("events", ["nCleanJets", "nCleanFatJets", "nBJetGood", "nJet", "nFatJet"], flatten=False),
+                           ColOut("CleanSubJet_pair", ["zg"], flatten=False)
+                           ],
+            "bycategory" : {},
+            },            
+    },
 )

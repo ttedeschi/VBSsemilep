@@ -1,0 +1,5154 @@
+{
+  "datasets": {
+    "names": [
+      "ssWW_LL_mg5_madspin",
+      "ssWW_TT_mg5_madspin"
+    ],
+    "samples": [
+      "ssWWLL",
+      "ssWWTT"
+    ],
+    "filesets": {
+      "ssWW_LL_mg5_madspin": {
+        "metadata": {
+          "sample": "ssWWLL",
+          "year": "2023_preBPix",
+          "isMC": "True",
+          "xsec": "0.02143",
+          "nevents": "100000"
+        },
+        "files": [
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_1/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_2/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_3/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_4/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_5/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_6/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_7/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_8/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_9/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_9/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_10/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_20/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_21/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_22/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_23/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_24/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_25/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_26/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_27/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_28/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_29/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_30/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_1/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_1/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_1/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_2/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_3/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_4/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_5/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_6/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_7/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_8/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_9/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_10/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_11/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_12/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_13/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_14/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_15/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_16/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_17/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_18/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_19/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_20/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root"
+        ]
+      },
+      "ssWW_TT_mg5_madspin": {
+        "metadata": {
+          "sample": "ssWWTT",
+          "year": "2023_preBPix",
+          "isMC": "True",
+          "xsec": "0.1589",
+          "nevents": "100000"
+        },
+        "files": [
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/nanov12_samples/MadSpin/WW_TT/ssWW_TT_madspin_nanoAODv12_Run3Summer23wmLHEGS_merged.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_0/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_2/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_3/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_4/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_5/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_6/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_7/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_8/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_9/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_10/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_20/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_21/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_22/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_23/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_24/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_25/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_26/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_27/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_28/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_29/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_30/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_1/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_1/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_2/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_3/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_4/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_5/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_6/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_7/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_8/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_9/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_11/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_12/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_13/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_14/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_15/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_16/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_17/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_18/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_19/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
+          "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_20/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root"
+        ]
+      }
+    },
+    "subsamples": {
+      "ssWWLL": {
+        "type": "StandardSelection",
+        "categories": {
+          "ssWWLL": [
+            {
+              "name": "passthrough",
+              "params": {},
+              "collection": "events",
+              "function": {
+                "name": "passthrough_f",
+                "module": "pocket_coffea.lib.cut_functions",
+                "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+                "f_hash": 8755182942862
+              },
+              "id": "passthrough__-3778167382032701371"
+            }
+          ]
+        },
+        "is_multidim": false,
+        "multidim_collection": null
+      },
+      "ssWWTT": {
+        "type": "StandardSelection",
+        "categories": {
+          "ssWWTT": [
+            {
+              "name": "passthrough",
+              "params": {},
+              "collection": "events",
+              "function": {
+                "name": "passthrough_f",
+                "module": "pocket_coffea.lib.cut_functions",
+                "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+                "f_hash": 8755182942862
+              },
+              "id": "passthrough__-3778167382032701371"
+            }
+          ]
+        },
+        "is_multidim": false,
+        "multidim_collection": null
+      }
+    }
+  },
+  "skim": [
+    {
+      "name": "nPVgood_1",
+      "params": {
+        "N": 1
+      },
+      "collection": "events",
+      "function": {
+        "name": "<lambda>",
+        "module": "pocket_coffea.lib.cut_functions",
+        "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+        "f_hash": 8755018893262
+      },
+      "id": "nPVgood_1__8585490974843796601"
+    },
+    {
+      "name": "cut_Muon_min1_pt1_or_Electron_min1_pt1",
+      "params": {
+        "coll": [
+          "Muon",
+          "Electron"
+        ],
+        "nMin": [
+          1,
+          1
+        ],
+        "minpt": [
+          1,
+          1
+        ]
+      },
+      "collection": "events",
+      "function": {
+        "name": "cut_function",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+        "f_hash": 8755020566348
+      },
+      "id": "cut_Muon_min1_pt1_or_Electron_min1_pt1__-2505165871299713931"
+    }
+  ],
+  "preselections": [
+    {
+      "name": "VBS_jets_presel",
+      "params": {
+        "mass": 400,
+        "deltaEta": 2.5,
+        "pt_leadingJet": 50,
+        "nJet": 4,
+        "nJet_with_FatJet": 2
+      },
+      "collection": "events",
+      "function": {
+        "name": "VBS_topology",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+        "f_hash": 8755020565798
+      },
+      "id": "VBS_jets_presel__-56953870640001472"
+    },
+    {
+      "name": "semileptonic_preselW",
+      "params": {
+        "W": true,
+        "pt_leading_electron": 30,
+        "pt_leading_muon": 30,
+        "eta_max_lep": 2.5,
+        "nJet": 4,
+        "nFatJets": 1,
+        "nJet_with_FatJet": 2,
+        "met_electron": 30,
+        "met_muon": 30
+      },
+      "collection": "events",
+      "function": {
+        "name": "semileptonic",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+        "f_hash": 8755020565818
+      },
+      "id": "semileptonic_preselW__-9195676605244173752"
+    },
+    {
+      "name": "Vjet_massSide",
+      "params": {
+        "VV": true,
+        "side": true,
+        "mass_min": 110,
+        "mass_max": 60,
+        "nJet_min": 4
+      },
+      "collection": "events",
+      "function": {
+        "name": "Vjet_massSide",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+        "f_hash": 8755020566278
+      },
+      "id": "Vjet_massSide__-7469457082532683744"
+    }
+  ],
+  "categories": {
+    "type": "StandardSelection",
+    "categories": {
+      "baseline": [
+        {
+          "name": "passthrough",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "passthrough_f",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182942862
+          },
+          "id": "passthrough__-3778167382032701371"
+        }
+      ],
+      "SingleEle_AK8": [
+        {
+          "name": "nCleanFatJets_eq1",
+          "params": {
+            "N": 1,
+            "coll": "CleanFatJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816370
+          },
+          "id": "nCleanFatJets_eq1__8455968634707994892"
+        },
+        {
+          "name": "Wjet_mass",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "Vmass",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8755020566308
+          },
+          "id": "Wjet_mass__1566673339368876491"
+        },
+        {
+          "name": "nBJetGood_eq0",
+          "params": {
+            "N": 0,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816370
+          },
+          "id": "nBJetGood_eq0__3420335226707530632"
+        },
+        {
+          "name": "nElectronGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "ElectronGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nElectron",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816440
+          },
+          "id": "nElectronGood_1_pt0__6019370372351900175"
+        }
+      ],
+      "SingleEle_AK4": [
+        {
+          "name": "Wjet_mass",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "Vmass",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8755020566308
+          },
+          "id": "Wjet_mass__1566673339368876491"
+        },
+        {
+          "name": "nBJetGood_eq0",
+          "params": {
+            "N": 0,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816370
+          },
+          "id": "nBJetGood_eq0__3420335226707530632"
+        },
+        {
+          "name": "nCleanJets_min4",
+          "params": {
+            "N": 4,
+            "coll": "CleanJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816340
+          },
+          "id": "nCleanJets_min4__8265217557669462523"
+        },
+        {
+          "name": "nElectronGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "ElectronGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nElectron",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816440
+          },
+          "id": "nElectronGood_1_pt0__6019370372351900175"
+        }
+      ],
+      "SingleMuon_AK8": [
+        {
+          "name": "Wjet_mass",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "Vmass",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8755020566308
+          },
+          "id": "Wjet_mass__1566673339368876491"
+        },
+        {
+          "name": "nCleanFatJets_eq1",
+          "params": {
+            "N": 1,
+            "coll": "CleanFatJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816370
+          },
+          "id": "nCleanFatJets_eq1__8455968634707994892"
+        },
+        {
+          "name": "nMuonGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "MuonGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nMuon",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816450
+          },
+          "id": "nMuonGood_1_pt0__8041840709563915952"
+        },
+        {
+          "name": "nBJetGood_eq0",
+          "params": {
+            "N": 0,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816370
+          },
+          "id": "nBJetGood_eq0__3420335226707530632"
+        }
+      ],
+      "SingleMuon_AK4": [
+        {
+          "name": "Wjet_mass",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "Vmass",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8755020566308
+          },
+          "id": "Wjet_mass__1566673339368876491"
+        },
+        {
+          "name": "nBJetGood_eq0",
+          "params": {
+            "N": 0,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816370
+          },
+          "id": "nBJetGood_eq0__3420335226707530632"
+        },
+        {
+          "name": "nCleanJets_min4",
+          "params": {
+            "N": 4,
+            "coll": "CleanJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816340
+          },
+          "id": "nCleanJets_min4__8265217557669462523"
+        },
+        {
+          "name": "nMuonGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "MuonGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nMuon",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816450
+          },
+          "id": "nMuonGood_1_pt0__8041840709563915952"
+        }
+      ],
+      "SingleEle_AK8_bjets_ttbar": [
+        {
+          "name": "nCleanFatJets_eq1",
+          "params": {
+            "N": 1,
+            "coll": "CleanFatJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816370
+          },
+          "id": "nCleanFatJets_eq1__8455968634707994892"
+        },
+        {
+          "name": "nBJetGood_min2",
+          "params": {
+            "N": 2,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816340
+          },
+          "id": "nBJetGood_min2__6336617691058489502"
+        },
+        {
+          "name": "nElectronGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "ElectronGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nElectron",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816440
+          },
+          "id": "nElectronGood_1_pt0__6019370372351900175"
+        }
+      ],
+      "SingleEle_AK4_bje_ttbar": [
+        {
+          "name": "nBJetGood_min2",
+          "params": {
+            "N": 2,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816340
+          },
+          "id": "nBJetGood_min2__6336617691058489502"
+        },
+        {
+          "name": "nCleanJets_min4",
+          "params": {
+            "N": 4,
+            "coll": "CleanJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816340
+          },
+          "id": "nCleanJets_min4__8265217557669462523"
+        },
+        {
+          "name": "nElectronGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "ElectronGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nElectron",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816440
+          },
+          "id": "nElectronGood_1_pt0__6019370372351900175"
+        }
+      ],
+      "SingleMuon_AK8_bjets_ttbar": [
+        {
+          "name": "nCleanFatJets_eq1",
+          "params": {
+            "N": 1,
+            "coll": "CleanFatJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816370
+          },
+          "id": "nCleanFatJets_eq1__8455968634707994892"
+        },
+        {
+          "name": "nBJetGood_eq2",
+          "params": {
+            "N": 2,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816370
+          },
+          "id": "nBJetGood_eq2__-1799005956979940431"
+        },
+        {
+          "name": "nMuonGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "MuonGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nMuon",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816450
+          },
+          "id": "nMuonGood_1_pt0__8041840709563915952"
+        }
+      ],
+      "SingleMuon_AK4_bjets_ttbar": [
+        {
+          "name": "nCleanJets_min4",
+          "params": {
+            "N": 4,
+            "coll": "CleanJets"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816340
+          },
+          "id": "nCleanJets_min4__8265217557669462523"
+        },
+        {
+          "name": "nBJetGood_min2",
+          "params": {
+            "N": 2,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816340
+          },
+          "id": "nBJetGood_min2__6336617691058489502"
+        },
+        {
+          "name": "nMuonGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "MuonGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nMuon",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816450
+          },
+          "id": "nMuonGood_1_pt0__8041840709563915952"
+        }
+      ],
+      "SingleEle_AK8_AK4_sideL_Wjets": [
+        {
+          "name": "Wjet_sideL",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "sideL",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8755020566288
+          },
+          "id": "Wjet_sideL__-6956255572618724248"
+        },
+        {
+          "name": "nElectronGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "ElectronGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nElectron",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816440
+          },
+          "id": "nElectronGood_1_pt0__6019370372351900175"
+        }
+      ],
+      "SingleEle_AK8_AK4_sideR_Wjets": [
+        {
+          "name": "Wjet_sideR",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "sideR",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8755020566298
+          },
+          "id": "Wjet_sideR__6699104271002944104"
+        },
+        {
+          "name": "nElectronGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "ElectronGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nElectron",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816440
+          },
+          "id": "nElectronGood_1_pt0__6019370372351900175"
+        }
+      ],
+      "SingleMuon_AK8_AK4_sideL_Wjets": [
+        {
+          "name": "Wjet_sideL",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "sideL",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8755020566288
+          },
+          "id": "Wjet_sideL__-6956255572618724248"
+        },
+        {
+          "name": "nMuonGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "MuonGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nMuon",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816450
+          },
+          "id": "nMuonGood_1_pt0__8041840709563915952"
+        }
+      ],
+      "SingleMuon_AK8_AK4_sideR_Wjets": [
+        {
+          "name": "Wjet_sideR",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "sideR",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8755020566298
+          },
+          "id": "Wjet_sideR__6699104271002944104"
+        },
+        {
+          "name": "nMuonGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "MuonGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nMuon",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8755182816450
+          },
+          "id": "nMuonGood_1_pt0__8041840709563915952"
+        }
+      ]
+    },
+    "is_multidim": false,
+    "multidim_collection": null
+  },
+  "workflow": {
+    "name": "VBS_WV_Processor",
+    "workflow_options": {
+      "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet/"
+    },
+    "srcfile": "/afs/cern.ch/user/l/ldellape/VBSsemilep/workflowVBS.py"
+  },
+  "weights": {
+    "ssWWLL": {
+      "bycategory": {
+        "baseline": [],
+        "SingleEle_AK8": [],
+        "SingleEle_AK4": [],
+        "SingleMuon_AK8": [],
+        "SingleMuon_AK4": [],
+        "SingleEle_AK8_bjets_ttbar": [],
+        "SingleEle_AK4_bje_ttbar": [],
+        "SingleMuon_AK8_bjets_ttbar": [],
+        "SingleMuon_AK4_bjets_ttbar": [],
+        "SingleEle_AK8_AK4_sideL_Wjets": [],
+        "SingleEle_AK8_AK4_sideR_Wjets": [],
+        "SingleMuon_AK8_AK4_sideL_Wjets": [],
+        "SingleMuon_AK8_AK4_sideR_Wjets": []
+      },
+      "inclusive": [
+        "genWeight",
+        "lumi",
+        "XS",
+        "pileup"
+      ]
+    },
+    "ssWWTT": {
+      "bycategory": {
+        "baseline": [],
+        "SingleEle_AK8": [],
+        "SingleEle_AK4": [],
+        "SingleMuon_AK8": [],
+        "SingleMuon_AK4": [],
+        "SingleEle_AK8_bjets_ttbar": [],
+        "SingleEle_AK4_bje_ttbar": [],
+        "SingleMuon_AK8_bjets_ttbar": [],
+        "SingleMuon_AK4_bjets_ttbar": [],
+        "SingleEle_AK8_AK4_sideL_Wjets": [],
+        "SingleEle_AK8_AK4_sideR_Wjets": [],
+        "SingleMuon_AK8_AK4_sideL_Wjets": [],
+        "SingleMuon_AK8_AK4_sideR_Wjets": []
+      },
+      "inclusive": [
+        "genWeight",
+        "lumi",
+        "XS",
+        "pileup"
+      ]
+    }
+  },
+  "variations": {
+    "ssWWLL": {
+      "weights": {
+        "baseline": [],
+        "SingleEle_AK8": [],
+        "SingleEle_AK4": [],
+        "SingleMuon_AK8": [],
+        "SingleMuon_AK4": [],
+        "SingleEle_AK8_bjets_ttbar": [],
+        "SingleEle_AK4_bje_ttbar": [],
+        "SingleMuon_AK8_bjets_ttbar": [],
+        "SingleMuon_AK4_bjets_ttbar": [],
+        "SingleEle_AK8_AK4_sideL_Wjets": [],
+        "SingleEle_AK8_AK4_sideR_Wjets": [],
+        "SingleMuon_AK8_AK4_sideL_Wjets": [],
+        "SingleMuon_AK8_AK4_sideR_Wjets": []
+      },
+      "shape": {
+        "baseline": [],
+        "SingleEle_AK8": [],
+        "SingleEle_AK4": [],
+        "SingleMuon_AK8": [],
+        "SingleMuon_AK4": [],
+        "SingleEle_AK8_bjets_ttbar": [],
+        "SingleEle_AK4_bje_ttbar": [],
+        "SingleMuon_AK8_bjets_ttbar": [],
+        "SingleMuon_AK4_bjets_ttbar": [],
+        "SingleEle_AK8_AK4_sideL_Wjets": [],
+        "SingleEle_AK8_AK4_sideR_Wjets": [],
+        "SingleMuon_AK8_AK4_sideL_Wjets": [],
+        "SingleMuon_AK8_AK4_sideR_Wjets": []
+      }
+    },
+    "ssWWTT": {
+      "weights": {
+        "baseline": [],
+        "SingleEle_AK8": [],
+        "SingleEle_AK4": [],
+        "SingleMuon_AK8": [],
+        "SingleMuon_AK4": [],
+        "SingleEle_AK8_bjets_ttbar": [],
+        "SingleEle_AK4_bje_ttbar": [],
+        "SingleMuon_AK8_bjets_ttbar": [],
+        "SingleMuon_AK4_bjets_ttbar": [],
+        "SingleEle_AK8_AK4_sideL_Wjets": [],
+        "SingleEle_AK8_AK4_sideR_Wjets": [],
+        "SingleMuon_AK8_AK4_sideL_Wjets": [],
+        "SingleMuon_AK8_AK4_sideR_Wjets": []
+      },
+      "shape": {
+        "baseline": [],
+        "SingleEle_AK8": [],
+        "SingleEle_AK4": [],
+        "SingleMuon_AK8": [],
+        "SingleMuon_AK4": [],
+        "SingleEle_AK8_bjets_ttbar": [],
+        "SingleEle_AK4_bje_ttbar": [],
+        "SingleMuon_AK8_bjets_ttbar": [],
+        "SingleMuon_AK4_bjets_ttbar": [],
+        "SingleEle_AK8_AK4_sideL_Wjets": [],
+        "SingleEle_AK8_AK4_sideR_Wjets": [],
+        "SingleMuon_AK8_AK4_sideL_Wjets": [],
+        "SingleMuon_AK8_AK4_sideR_Wjets": []
+      }
+    }
+  },
+  "variables": {},
+  "columns": {
+    "ssWWLL": {
+      "baseline": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK8": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK4": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK8": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK4": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK8_bjets_ttbar": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK4_bje_ttbar": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK8_bjets_ttbar": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK4_bjets_ttbar": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK8_AK4_sideL_Wjets": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK8_AK4_sideR_Wjets": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK8_AK4_sideL_Wjets": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK8_AK4_sideR_Wjets": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ]
+    },
+    "ssWWTT": {
+      "baseline": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK8": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK4": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK8": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK4": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK8_bjets_ttbar": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK4_bje_ttbar": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK8_bjets_ttbar": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK4_bjets_ttbar": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK8_AK4_sideL_Wjets": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleEle_AK8_AK4_sideR_Wjets": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK8_AK4_sideL_Wjets": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ],
+      "SingleMuon_AK8_AK4_sideR_Wjets": [
+        {
+          "collection": "ElectronGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "MuonGood",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanFatJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi",
+            "tau1",
+            "tau2",
+            "tau21",
+            "msoftdrop",
+            "mass"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanJet_noVBS",
+          "columns": [
+            "pt",
+            "eta",
+            "phi"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "VBS_dijet_system",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "V_dijet_candidate",
+          "columns": [
+            "mass",
+            "pt",
+            "deltaEta"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "zepp_ele",
+            "zepp_muon",
+            "zepp_lep"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "MT_mu_miss",
+            "MT_ele_miss",
+            "MT_lep_miss"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "events",
+          "columns": [
+            "nCleanJets",
+            "nCleanFatJets",
+            "nBJetGood",
+            "nJet",
+            "nFatJet"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        },
+        {
+          "collection": "CleanSubJet_pair",
+          "columns": [
+            "zg"
+          ],
+          "flatten": false,
+          "store_size": true,
+          "fill_none": true,
+          "fill_value": -999.0,
+          "pos_start": null,
+          "pos_end": null
+        }
+      ]
+    }
+  }
+}

@@ -54,6 +54,11 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.VBS_pair_candidate()
         self.V_pair_candidate()
         self.Vlep_transverse()
+        self.zepp_variable()
+        self.make_subjets_pair()
+        
+        
+        
         
         self.events["CleanFatJet"] = ak.with_field(
         self.events["CleanFatJet"],
@@ -81,6 +86,18 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.events["MET"] = ak.with_field(self.events.MET, MET_phi_corrected, "phi")
         '''
         
+
+    def make_subjets_pair(self):
+        subjets = self.events["SubJet"]
+        sj_1 = subjets[self.events.CleanFatJet.subJetIdx1]
+        sj_2 = subjets[self.events.CleanFatJet.subJetIdx2]
+        clean_subjets = ak.zip({
+            "subjet1": sj_1,
+            "subjet2": sj_2,
+            "zg" : abs(sj_1.pt - sj_2.pt)/self.events.CleanFatJet.pt,            
+        })
+        self.events["CleanSubJet_pair"] = clean_subjets
+
         
     # make the pairs with the ak4 jets collection, take the pair with the greates m_jj as VBS dijet candidate
     def VBS_pair_candidate(self):
@@ -110,6 +127,8 @@ class VBS_WV_Processor(BaseProcessorABC):
             "pt2" : best_pair["jet2"].pt,
             "idx1": best_idx_pair["idx1"],
             "idx2": best_idx_pair["idx2"],
+            "eta1" : best_pair["jet1"].eta,
+            "eta2" : best_pair["jet2"].eta,
         })
         self.events["VBS_dijet_system"] = vbs_dijet
         
@@ -193,6 +212,12 @@ class VBS_WV_Processor(BaseProcessorABC):
             (1 - np.cos(self.events.MuonGood.phi - self.events.MET.phi))
         )
         
+    def zepp_variable(self):
+        if "VBS_dijet_system" in self.events.fields:
+            self.events["zepp_lep"] = (abs(self.events.LeptonGood.eta - (self.events.VBS_dijet_system.eta1 + self.events.VBS_dijet_system.eta2)/2))/abs(self.events.VBS_dijet_system.deltaEta)
+            self.events["zepp_ele"] = (abs(self.events.ElectronGood.eta - (self.events.VBS_dijet_system.eta1 + self.events.VBS_dijet_system.eta2)/2))/abs(self.events.VBS_dijet_system.deltaEta)
+            self.events["zepp_muon"] = (abs(self.events.MuonGood.eta - (self.events.VBS_dijet_system.eta1 + self.events.VBS_dijet_system.eta2)/2))/abs(self.events.VBS_dijet_system.deltaEta)
+            print(f" zepp_ele: {self.events.zepp_ele}")
         
         
     def count_objects(self, variation):
@@ -202,3 +227,5 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.events["nCleanFatJets"] = ak.num(self.events.CleanFatJet)
         self.events["nCleanJets"] = ak.num(self.events.CleanJet)
         self.events["nBJetGood"] = ak.num(self.events.BJetGood)
+        self.events["nJet"] = ak.num(self.events.Jet)
+        self.events["nFatJet"] = ak.num(self.events.FatJet)

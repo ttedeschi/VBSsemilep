@@ -1,11 +1,11 @@
 object_preselection:
   Electron:
       pt: 0
-      eta: 2.5
+      eta: 5.0
       id: mvaIso_WP80
   Muon:
        pt: 0
-       eta: 2.5
+       eta: 5.0
        iso: 0.06
        id: tightId 
   Jet:

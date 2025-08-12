@@ -10,7 +10,7 @@ skim_dict = {
          },
          "Jet" : {
              "ptMin" : 1,
-             "nMin" : 2,
+             "nMin" : 1,
          }
     },
     "Zlep_V" : {
@@ -52,7 +52,7 @@ skim_dict = {
         },
         "Jet" : {
             "ptMin" : 1, 
-            "nMin": 2,
+            "nMin": 1,
         },
     },
     "Wjets" : {
@@ -66,7 +66,7 @@ skim_dict = {
         },
         "Jet" : {
             "ptMin" : 1, 
-            "nMin": 2,
+            "nMin": 1,
         },
     }
     
