@@ -13,7 +13,7 @@ skim_dict = {
              "nMin" : 1,
          }
     },
-    "Zlep_V" : {
+    "ZZ" : {
          "Muon" : {
              "ptMin" : 1,
              "nMin" : 2,

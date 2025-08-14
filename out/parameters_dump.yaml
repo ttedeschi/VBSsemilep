@@ -601,6 +601,24 @@ jets_calibration:
     2022_postEE: true
     2023_preBPix: true
     2023_postBPix: true
+  rescale_MET:
+    2016_PreVFP: false
+    2016_PostVFP: false
+    '2017': false
+    '2018': false
+    2022_preEE: true
+    2022_postEE: true
+    2023_preBPix: true
+    2023_postBPix: true
+  rescale_MET_branch:
+    2016_PreVFP: MET
+    2016_PostVFP: MET
+    '2017': MET
+    '2018': MET
+    2022_preEE: PuppiMET
+    2022_postEE: PuppiMET
+    2023_preBPix: PuppiMET
+    2023_postBPix: PuppiMET
 jet_scale_factors:
   jet_collection:
     btag: JetGood

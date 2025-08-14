@@ -1,5 +1,7 @@
 import awkward as ak 
 import numpy as np
+import json
+import os
 from pocket_coffea.workflows.base import BaseProcessorABC
 from pocket_coffea.utils.configurator import Configurator
 from pocket_coffea.lib.deltaR_matching import metric_eta, metric_phi
@@ -20,15 +22,30 @@ from pocket_coffea.lib.objects import (
 class VBS_WV_Processor(BaseProcessorABC):
     def __init__(self, cfg: Configurator):
         super().__init__(cfg)
+        self.cfg = cfg
+        self._tag = self.cfg.datasets_cfg["tag"]
         
     def apply_object_preselection(self, variation):
-        # here the functions from pocket_coffea.lib.objects must be called
-        # passing the yaml file defined in ./parameters directory
+        print(self._tag)
+
+        nEvents_total = self.nEvents_initial
+        xsection = self._xsec
+        lumi = nEvents_total/float(xsection)        
+
+        print("*****************************************************************************************")
+        print(f" processing file from {self._dataset}")
+        print(f'{self.events.metadata["filename"]}')
+        print(f" number of events: {self.nEvents_initial}")
+        print(f" xsection: {self._xsec}")
+        print(f" lumi: {lumi} [pb^-1]")
+        print("*****************************************************************************************")
+        self.out_log()
+        
         if self._isMC and "2023" in self._year:
             self.events["Jet"] = jet_correction_correctionlib(self.events, "Jet", "AK4PFPuppi", "2023_Summer23", 'Summer23Prompt23_V2_MC') 
             self.events["FatJet"] = jet_correction_correctionlib(self.events, "FatJet", "AK8PFPuppi" , "2023_Summer23", 'Summer23Prompt23_V2_MC')
-       
-        
+            self.events["nEvents"] = nEvents_total
+                    
         # mask the electrons and muons
         self.events["MuonGood"] = lepton_selection(self.events, "Muon", self.params)
         self.events["ElectronGood"] = lepton_selection(self.events, "Electron", self.params)
@@ -47,19 +64,19 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.events["CleanJet"], self.CleanJetMask = jet_selection(
             self.events, "Jet", self.params, self._year,  leptons_collection="LeptonGood"
         )
-        print("*****************************************************************************************")
+
         
         # create collection of the two ak4 jets that return the greatest mass and remove them from the 
         # ak4 list in a new CleanJet_noVBS colleciton
         self.VBS_pair_candidate()
         self.V_pair_candidate()
-        self.Vlep_transverse()
+        if "WW" in self._tag:
+            self.Vlep_transverse()
+        else: 
+            self.dilepton_system()
         self.zepp_variable()
         self.make_subjets_pair()
-        
-        
-        
-        
+                
         self.events["CleanFatJet"] = ak.with_field(
         self.events["CleanFatJet"],
         self.events.CleanFatJet.tau2 / self.events.CleanFatJet.tau1,
@@ -77,6 +94,7 @@ class VBS_WV_Processor(BaseProcessorABC):
             wp = self.params.object_preselection.Jet["btag"]["wp"],
         )
         self.events["BJetGood"] = bjets_tagged[abs(bjets_tagged.eta) < 2.5]
+
 
         
         ''' non ci sono per 2023
@@ -96,7 +114,6 @@ class VBS_WV_Processor(BaseProcessorABC):
             "subjet2": sj_2,
             "zg" : abs(sj_1.pt - sj_2.pt)/self.events.CleanFatJet.pt,            
         })
-        print(f" zg: {clean_subjets.zg}")
         self.events["CleanSubJet_pair"] = clean_subjets
 
         
@@ -132,7 +149,11 @@ class VBS_WV_Processor(BaseProcessorABC):
             "eta2" : best_pair["jet2"].eta,
         })
         self.events["VBS_dijet_system"] = vbs_dijet
-        
+    
+    
+    def dilepton_system(self):
+        self.events["dilepton_candidate"] = get_dilepton(self.events.ElectronGood, self.events.MuonGood)
+            
     
     
     # create the pair of jets candidate from W/Z boson, removing the 2 jets already in the "VBS_dijet_system".
@@ -218,7 +239,6 @@ class VBS_WV_Processor(BaseProcessorABC):
             self.events["zepp_lep"] = (abs(self.events.LeptonGood.eta - (self.events.VBS_dijet_system.eta1 + self.events.VBS_dijet_system.eta2)/2))/abs(self.events.VBS_dijet_system.deltaEta)
             self.events["zepp_ele"] = (abs(self.events.ElectronGood.eta - (self.events.VBS_dijet_system.eta1 + self.events.VBS_dijet_system.eta2)/2))/abs(self.events.VBS_dijet_system.deltaEta)
             self.events["zepp_muon"] = (abs(self.events.MuonGood.eta - (self.events.VBS_dijet_system.eta1 + self.events.VBS_dijet_system.eta2)/2))/abs(self.events.VBS_dijet_system.deltaEta)
-            print(f" zepp_ele: {self.events.zepp_ele}")
         
         
     def count_objects(self, variation):
@@ -230,3 +250,24 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.events["nBJetGood"] = ak.num(self.events.BJetGood)
         self.events["nJet"] = ak.num(self.events.Jet)
         self.events["nFatJet"] = ak.num(self.events.FatJet)
+
+
+    def out_log(self):
+        nEvents_total = self.nEvents_initial
+        xsection = self._xsec
+        lumi = nEvents_total / float(xsection)
+        if "WtoLNu" in self._dataset:
+            log_path = f"log_WtoLNu-XJets.txt"
+        elif "TTtoLNu" in self._dataset:
+            log_path = f"log_TTtoLNu2Q.txt"
+        else:
+            log_path = f"log_{self._dataset}.txt"
+        with open(log_path, "a") as f:
+            f.write(
+                f'file={self.events.metadata["filename"]}, '
+                f"sample={self._dataset}, "
+                f"nEvents={self.nEvents_initial}, "
+                f"xsec={self._xsec}, "
+                f"lumi={lumi}, "
+                f"nEvents_afterSkim={self.nEvents_after_skim}\n"
+            )
