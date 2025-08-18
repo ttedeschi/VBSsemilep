@@ -5,6 +5,6 @@ jets_calibrator_JES_JER_Syst.pkl.gz
 __pycache__
 ./out
 *.txt
-./out_2
-./out_3
+out_2
+out_3
 ./plots
