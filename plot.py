@@ -9,12 +9,12 @@ norm_luminosity=False
 polarized=True
 
 
-#tag="WW"
-tag="ZZ"
+tag="WW"
+#tag="ZZ"
 
 
-category="baseline"
-#category="signal_AK8"
+#category="baseline"
+category="signal_AK8"
 #category="signal_AK4"
 #category="CR_TTbar"
 #category="CR_L_Wjets"
@@ -161,10 +161,11 @@ for var in field_name:
     # --- Overlay plot ---
     c_overlay = ROOT.TCanvas(f"c_{var}_overlay", f"Overlay: {var}", 800, 600)
     legend_overlay = ROOT.TLegend(0.7, 0.7, 0.9, 0.9)
+    sorted_hists = sorted(hists.items(), key=lambda kv: kv[1].GetMaximum(), reverse=True)
 
-    for idx, (label, h) in enumerate(hists.items()):
+    for idx, (label, h) in enumerate(sorted_hists):
         h.SetLineColor(idx + 1)
-        draw_option = "hist " if idx == 0 else "hist same"
+        draw_option = "hist" if idx == 0 else "hist same"
         h.Draw(draw_option)
         if idx == 0:
             h.GetXaxis().SetTitle(var)
@@ -173,8 +174,8 @@ for var in field_name:
         legend_overlay.AddEntry(h, label, "l")
 
     legend_overlay.Draw()
-    os.makedirs(f"./plots/{category}", exist_ok=True)
-    c_overlay.SaveAs(f"./plots/{category}/{var}_{category}_overlay.pdf")
+    os.makedirs(f"./plots/{tag}/{category}", exist_ok=True)
+    c_overlay.SaveAs(f"./plots/{tag}/{category}/{var}_{category}_overlay.pdf")
 
     # --- Stack plot ---
     c_stack = ROOT.TCanvas(f"c_{var}_stack", f"Stack: {var}", 800, 600)
@@ -194,4 +195,4 @@ for var in field_name:
     stack.SetMaximum(stack.GetMaximum() * 1.2)
     legend_stack.Draw()
 
-    c_stack.SaveAs(f"./plots/{category}/{var}_{category}_stack.pdf")
+    c_stack.SaveAs(f"./plots/{tag}/{category}/{var}_{category}_stack.pdf")

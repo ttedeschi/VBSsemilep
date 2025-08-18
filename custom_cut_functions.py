@@ -318,8 +318,6 @@ Wtransverse_mass_presel = Cut(
 # Z->ll dilepton mass                                       #
 #############################################################
 def dilepton_mass(events, params, year, sample, **kwargs):
-    print(f" dilepton: {events.dimuon_candidate.mass}")
-    print(f" dielectron : {events.dielectron_candidate.mass}")
     double_muon = events.nMuonGood == 2
     double_electron = events.nElectronGood == 2
     if params["VV"] is True:
@@ -340,7 +338,6 @@ def dilepton_mass(events, params, year, sample, **kwargs):
         mask = (
             (events.dilepton_candidate.mass > params["mass_max"] | events.dilepton_candidate.mass < params["mass_min"])
         )
-    print(mask)
     return ak.where(ak.is_none(mask), False, mask)
 
 dilepton_massZ = Cut(
@@ -450,13 +447,24 @@ def cut_function_2(events, params, year, sample, **kwargs):
     return ak.where(ak.is_none(combined_mask), False, combined_mask)
 
 
-
+def skim_single_leptons(events, params, year, sample, **kwargs):
+    mask = (
+        (ak.num(events.Muon) >=1)
+        |
+        (ak.num(events.Electron) >=1)
+    )
+    return ak.where(ak.is_none(mask), False, mask)
+skim_sigle_lepton= Cut(
+    name="skim_single_leptons",
+    params={},
+    function=skim_single_leptons
+)
 
 def skim_double_leptons(events, params, year, sample, **kwargs):
     mask = (
-        (ak.num(events.Muon) == 2)
+        (ak.num(events.Muon) >= 2)
         |
-        (ak.num(events.Electron) == 2)
+        (ak.num(events.Electron) >= 2)
     )
     return ak.where(ak.is_none(mask), False, mask)
 

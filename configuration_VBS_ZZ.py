@@ -71,16 +71,14 @@ cfg = Configurator(
         "baseline" : [passthrough],
         
         # signal
-        "DoubleEle_AK8" : [get_nElectron(2, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0,coll="BJetGood"), Vjet_massZ, dilepton_massZ, check_flavour_SF],
-        "DoubleEle_AK4" : [get_nElectron(2, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ, check_flavour_SF],
-        "DoubleMuon_AK8" : [get_nMuon(2, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massZ, dilepton_massZ, check_flavour_SF],
-        "DoubleMuon_AK4" : [get_nMuon(2, coll="MuonGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ, check_flavour_SF],
+        "DoubleEle_AK8" : [get_nElectron(2, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ],
+        "DoubleEle_AK4" : [get_nElectron(2, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ],
+        "DoubleMuon_AK8" : [get_nMuon(2, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ],
+        "DoubleMuon_AK4" : [get_nMuon(2, coll="MuonGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ],
 
         # TTto2L2Nu-2Jets
-        "DoubleEle_AK8_OF" : [get_nElectron(2, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0,coll="BJetGood"), Vjet_massZ, dilepton_massZ, check_flavour_OF],
-        "DoubleEle_AK4_OF" : [get_nElectron(2, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ, check_flavour_OF],
-        "DoubleMuon_AK8_OF" : [get_nMuon(2, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massZ, dilepton_massZ, check_flavour_OF],
-        "DoubleMuon_AK4_OF" : [get_nMuon(2, coll="MuonGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ, check_flavour_OF],
+        "AK8_OF" : [get_nMuon(1, coll="MuonGood"), get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ],
+        "AK4_OF" : [get_nMuon(1, coll="MuonGood"), get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ],
         
         # DY
         "DoubleEle_AK8_AK4_sideL_Zjets" : [get_nElectron(1, coll="ElectronGood"),  Zjet_sideL],
