@@ -102,27 +102,20 @@ def samples(category, sample, polarized, path="/eos/user/l/ldellape/VBS/parquet"
                 labels = ["ssWW", "ssWW","ssWW", "ssWW", "ssWW", "ssWW", "ssWW", "ssWW" ,"TTtoLNu2Q", "TTtoLNu2Q", "TTtoLNu2Q" , "TTtoLNu2Q", "WLtoLNu_2Jets","WLtoLNu_2Jets", "WLtoLNu_2Jets", "WtoLNu_2Jets"] 
         elif sample == "ZZ":
             parquet_patterns = [
-                f"{path}/ZZLL_mg5_madspin/DoubleEle_AK8_OF/*.parquet",
-                f"{path}/ZZLL_mg5_madspin/DoubleEle_AK4_OF/*.parquet",
-                f"{path}/ZZLL_mg5_madspin/DoubleMuon_AK8_OF/*.parquet",
-                f"{path}/ZZLL_mg5_madspin/DoubleMuon_AK4_OF/*.parquet",
-                f"{path}/ZZTT_mg5_madspin/DoubleEle_AK8_OF/*.parquet",
-                f"{path}/ZZTT_mg5_madspin/DoubleEle_AK4_OF/*.parquet",
-                f"{path}/ZZTT_mg5_madspin/DoubleMuon_AK8_OF/*.parquet",
-                f"{path}/ZZTT_mg5_madspin/DoubleMuon_AK4_OF/*.parquet",            
-                f"{path}/TTto2L2Nu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/DoubleEle_AK8_OF/*.parquet",
-                f"{path}/TTto2L2Nu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/DoubleEle_AK4_OF/*.parquet",
-                f"{path}/TTto2L2Nu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/DoubleMuon_AK8_OF/*.parquet",
-                f"{path}/TTto2L2Nu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/DoubleMuon_AK4_OF/*.parquet",    
-                f"{path}/DYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8_2023_preBPix/DoubleEle_AK4_OF/*.parquet",
-                f"{path}/DYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8_2023_preBPix/DoubleMuon_AK4_OF/*.parquet",
-                f"{path}/DYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8_2023_preBPix/DoubleEle_AK4_OF/*.parquet",
-                f"{path}/DYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8_2023_preBPix/DoubleMuon_AK4_OF/*.parquet",   
+                f"{path}/ZZLL_mg5_madspin/AK8_OF/*.parquet",
+                f"{path}/ZZLL_mg5_madspin/AK4_OF/*.parquet",
+                f"{path}/ZZTT_mg5_madspin/AK8_OF/*.parquet",
+                f"{path}/ZZTT_mg5_madspin/AK4_OF/*.parquet",         
+                f"{path}/TTto2L2Nu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/AK8_OF/*.parquet",
+                f"{path}/TTto2L2Nu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/AK4_OF/*.parquet",
+                f"{path}/DYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8_2023_preBPix/AK4_OF/*.parquet",
+                f"{path}/DYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8_2023_preBPix/AK8_OF/*.parquet",
+
             ]
             if polarized is True:
-                labels = ["ZZ_LL", "ZZ_LL", "ZZ_LL", "ZZ_LL", "ZZ_TT", "ZZ_TT", "ZZ_TT", "TTto2L2Nu-2Jets","TTto2L2Nu-2Jets","TTto2L2Nu-2Jets","TTto2L2Nu-2Jets", "DYto2L-4Jets", "DYto2L-4Jets", "DYto2L-4Jets", "DYto2L-4Jets"  ]
+                labels = ["ZZ_LL",  "ZZ_LL","ZZ_TT", "ZZ_TT", "TTto2L2Nu-2Jets","TTto2L2Nu-2Jets",  "DYto2L-4Jets", "DYto2L-4Jets"  ]
             else:
-                labels = ["ZZ", "ZZ", "ZZ", "ZZ", "ZZ", "ZZ", "ZZ", "TTto2L2Nu-2Jets","TTto2L2Nu-2Jets","TTto2L2Nu-2Jets","TTto2L2Nu-2Jets", "DYto2L-4Jets", "DYto2L-4Jets", "DYto2L-4Jets", "DYto2L-4Jets" ]
+                labels = ["ZZ", "ZZ", "ZZ", "ZZ","TTto2L2Nu-2Jets","TTto2L2Nu-2Jets", "DYto2L-4Jets", "DYto2L-4Jets" ]
 
     return parquet_patterns, labels
     
