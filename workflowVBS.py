@@ -26,19 +26,15 @@ class VBS_WV_Processor(BaseProcessorABC):
         self._tag = self.cfg.datasets_cfg["tag"]
         
     def apply_object_preselection(self, variation):
-        print(self._tag)
-
         nEvents_total = self.nEvents_initial
         xsection = self._xsec
         lumi = nEvents_total/float(xsection)        
-
         print("*****************************************************************************************")
         print(f" processing file from {self._dataset}")
         print(f'{self.events.metadata["filename"]}')
         print(f" number of events: {self.nEvents_initial}")
         print(f" xsection: {self._xsec}")
         print(f" lumi: {lumi} [pb^-1]")
-        print("*****************************************************************************************")
         self.out_log()
         
         if self._isMC and "2023" in self._year:
@@ -46,37 +42,17 @@ class VBS_WV_Processor(BaseProcessorABC):
             self.events["FatJet"] = jet_correction_correctionlib(self.events, "FatJet", "AK8PFPuppi" , "2023_Summer23", 'Summer23Prompt23_V2_MC')
             self.events["nEvents"] = nEvents_total
                     
-        # mask the electrons and muons
         self.events["MuonGood"] = lepton_selection(self.events, "Muon", self.params)
+        print(f"muon: {self.events.Muon.pt}")
+        print(f"muon: {self.events.MuonGood.pt}")
         self.events["ElectronGood"] = lepton_selection(self.events, "Electron", self.params)
-        tight_muons = self.events["MuonGood"]
-        
-        
-        tight_electron = self.events["ElectronGood"]
+        print(f"  ele : {self.events.Electron.pt}")
+        print(f"electron: {self.events.ElectronGood.pt}")
         self.events["LeptonGood"] = ak.concatenate((self.events.MuonGood, self.events.ElectronGood), axis=1)
-        tight_leptons = self.events["LeptonGood"]
         
-        
-        # selection on jet and fatjet...checking leptons not overlapping with jets/fatjets
         self.events["CleanFatJet"], self.CleanFatJetMask = jet_selection(
             self.events, "FatJet", self.params, self._year,  leptons_collection="LeptonGood"
-        )
-        self.events["CleanJet"], self.CleanJetMask = jet_selection(
-            self.events, "Jet", self.params, self._year,  leptons_collection="LeptonGood"
-        )
-
-        
-        # create collection of the two ak4 jets that return the greatest mass and remove them from the 
-        # ak4 list in a new CleanJet_noVBS colleciton
-        self.VBS_pair_candidate()
-        self.V_pair_candidate()
-        if "WW" in self._tag:
-            self.Vlep_transverse()
-        else: 
-            self.dilepton_system()
-        self.zepp_variable()
-        self.make_subjets_pair()
-                
+        )               
         self.events["CleanFatJet"] = ak.with_field(
         self.events["CleanFatJet"],
         self.events.CleanFatJet.tau2 / self.events.CleanFatJet.tau1,
@@ -87,23 +63,26 @@ class VBS_WV_Processor(BaseProcessorABC):
             self.events.CleanFatJet.tau3/self.events.CleanFatJet.tau2,
             "tau32"
         )
-        
+        self.events["CleanJet"], self.CleanJetMask = jet_selection(
+            self.events, "Jet", self.params, self._year,  leptons_collection="LeptonGood"
+        )
         bjets_tagged = btagging(
             self.events["CleanJet"],
             self.params.btagging.working_point[self._year], 
             wp = self.params.object_preselection.Jet["btag"]["wp"],
         )
         self.events["BJetGood"] = bjets_tagged[abs(bjets_tagged.eta) < 2.5]
-
-
         
-        ''' non ci sono per 2023
-        # now MET, checking for available corrections, if yes overwrite the collections
-        MET_pt_corrected, MET_phi_corrected = met_xy_correction(self.params, self.events, self._year, self._era)
-        self.events["MET"] = ak.with_field(self.events.MET, MET_pt_corrected, "pt")
-        self.events["MET"] = ak.with_field(self.events.MET, MET_phi_corrected, "phi")
-        '''
         
+        self.VBS_pair_candidate()
+        self.V_pair_candidate()
+        if "WW" in self._tag:
+            self.Vlep_transverse()
+        else: 
+            self.dilepton_system()
+        self.zepp_variable()
+        self.make_subjets_pair()
+
 
     def make_subjets_pair(self):
         subjets = self.events["SubJet"]
@@ -152,7 +131,8 @@ class VBS_WV_Processor(BaseProcessorABC):
     
     
     def dilepton_system(self):
-        self.events["dilepton_candidate"] = get_dilepton(self.events.ElectronGood, self.events.MuonGood)
+        self.events["dimuon_candidate"] = get_dilepton(self.events.MuonGood, None)
+        self.events["dielectron_candidate"] = get_dilepton(self.events.ElectronGood, None)
             
     
     
@@ -221,18 +201,18 @@ class VBS_WV_Processor(BaseProcessorABC):
         
     # prepare the transverse mass of electron/muon + MET
     def Vlep_transverse(self):
-        self.events["MT_lep_miss"] = np.sqrt(
+        self.events["MT_lep_miss"] = ak.firsts(np.sqrt(
             2 * self.events.LeptonGood.pt * self.events.MET.pt *
             (1 - np.cos(self.events.LeptonGood.phi - self.events.MET.phi))
-        )
-        self.events["MT_ele_miss"] = np.sqrt(
+        ))
+        self.events["MT_ele_miss"] =ak.firsts(np.sqrt(
             2 * self.events.ElectronGood.pt * self.events.MET.pt *
             (1 - np.cos(self.events.ElectronGood.phi - self.events.MET.phi))
-        )
-        self.events["MT_mu_miss"] = np.sqrt(
+        ))
+        self.events["MT_mu_miss"] = ak.firsts(np.sqrt(
             2 * self.events.MuonGood.pt * self.events.MET.pt *
             (1 - np.cos(self.events.MuonGood.phi - self.events.MET.phi))
-        )
+        ))
         
     def zepp_variable(self):
         if "VBS_dijet_system" in self.events.fields:
@@ -260,6 +240,12 @@ class VBS_WV_Processor(BaseProcessorABC):
             log_path = f"log_WtoLNu-XJets.txt"
         elif "TTtoLNu" in self._dataset:
             log_path = f"log_TTtoLNu2Q.txt"
+        elif "TbarWplus" in self._dataset:
+            log_path = "log_TbarWplus.txt"
+        elif "TTto2L2Nu" in self._dataset:
+            log_path = "log_TTto2L2Nu.txt"
+        elif "DY" in self._dataset:
+            log_path = "log_DY.txt"
         else:
             log_path = f"log_{self._dataset}.txt"
         with open(log_path, "a") as f:

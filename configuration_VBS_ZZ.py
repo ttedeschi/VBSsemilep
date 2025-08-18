@@ -13,6 +13,7 @@ from pocket_coffea.lib.columns_manager import ColOut
 
 import custom_cut_functions 
 
+
 cloudpickle.register_pickle_by_value(workflowVBS)
 cloudpickle.register_pickle_by_value(custom_cut_functions)
 
@@ -37,22 +38,20 @@ cfg = Configurator(
     parameters=parameters,
     datasets = {
         "tag" : "ZZ",
-        "jsons" : [#f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
-                   f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   #f"{localdir}/datasets/TbarWplus/*.json"
+        "jsons" : [f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
+                   #f"{localdir}/datasets/TTto2L2Nu-2Jets/TTto2L2Nu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                   #f"{localdir}/datasets/DY/DYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
+                   #f"{localdir}/datasets/DY/DYto2L-2Jets_MLL-50_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json".
+                   #f"{localdir}/datasets/DY/DYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8.json",
                    ],
         "filter" : {
-            "samples" : ["ssWWTT", "ssWWLL", "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8"],
+            "samples" : ["ZZTT", "ZZLL", "DYto2L-2Jets_MLL-10to50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", "DYto2L-4Jets_MLL-50to120_HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8", "DYto2L-2Jets_MLL-50_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", "TTto2L2Nu-2Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8"],
         }
         }, 
     workflow=VBS_WV_Processor,
     skim = [
             get_nPVgood(1), 
-            get_nObj_min_or(
-                [skim_dict["ZZ"]["Muon"]["ptMin"],skim_dict["ZZ"]["Electron"]["ptMin"]], 
-                [skim_dict["ZZ"]["Muon"]["nMin"], skim_dict["ZZ"]["Electron"]["nMin"]],
-                ["Muon", "Electron"]),
+            skim_double_lepton,
             ],
     
     # signal
@@ -71,29 +70,26 @@ cfg = Configurator(
     categories= {
         "baseline" : [passthrough],
         
-        
-        "DoubleEle_AK8" : [get_nElectron(2, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massZ, dilepton_massZ],
-        "DoubleEle_AK4" : [get_nElectron(2, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massZ, dilepton_massZ],
-        "DoubleMuon_AK8" : [get_nMuon(2, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massZ, dilepton_massZ],
-        "DoubleMuon_AK4" : [get_nMuon(2, coll="MuonGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massZ, dilepton_massZ],
-        "DoubleLepton_AK8" : [get_nObj_eq(2, coll="LeptonGood"), get_nObj_eq(1, coll="CleanFatJet") , get_nObj_eq(0, coll="BJetGood"), Vjet_massZ, dilepton_massZ],
-        "DoubleLepton_AK4" : [get_nObj_eq(2, coll="LeptonGood"), get_nObj_min(4, coll="CleanJet") , get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massZ, dilepton_massZ],
+        # signal
+        "DoubleEle_AK8" : [get_nElectron(2, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0,coll="BJetGood"), Vjet_massZ, dilepton_massZ, check_flavour_SF],
+        "DoubleEle_AK4" : [get_nElectron(2, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ, check_flavour_SF],
+        "DoubleMuon_AK8" : [get_nMuon(2, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massZ, dilepton_massZ, check_flavour_SF],
+        "DoubleMuon_AK4" : [get_nMuon(2, coll="MuonGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ, check_flavour_SF],
 
-        # ttbar/tbarWplus
-        "DoubleEle_AK8_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_min(2, coll="BJetGood")],
-        "DoubleEle_AK4_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"), get_nObj_min(2, coll="BJetGood")],
-        "DoubleMuon_AK8_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_eq(2, coll="BJetGood")],
-        "DoubleMuon_AK4_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4, coll="CleanJet"), get_nObj_min(2, coll="BJetGood")],
-        "DoubleLepton_AK8_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(4, coll="CleanJet"), get_nObj_min(2, coll="BJetGood")],
-        "DoubleLepton_AK4_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(4, coll="CleanJet"), get_nObj_min(2, coll="BJetGood")],
+        # TTto2L2Nu-2Jets
+        "DoubleEle_AK8_OF" : [get_nElectron(2, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0,coll="BJetGood"), Vjet_massZ, dilepton_massZ, check_flavour_OF],
+        "DoubleEle_AK4_OF" : [get_nElectron(2, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ, check_flavour_OF],
+        "DoubleMuon_AK8_OF" : [get_nMuon(2, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massZ, dilepton_massZ, check_flavour_OF],
+        "DoubleMuon_AK4_OF" : [get_nMuon(2, coll="MuonGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), Vjet_massZ, dilepton_massZ, check_flavour_OF],
         
-        #WtoLNu-XJets (check contamination in the jet mass window of SR)
-        "DoubleEle_AK8_AK4_sideL_Wjets" : [get_nElectron(1, coll="ElectronGood"), Zjet_sideL],
-        "DoubleEle_AK8_AK4_sideR_Wjets" : [get_nElectron(1, coll="ElectronGood"), Zjet_sideR],
-        "DoubleMuon_AK8_AK4_sideL_Wjets" : [get_nMuon(1, coll="MuonGood"), Zjet_sideL],
-        "DoubleMuon_AK8_AK4_sideR_Wjets" : [get_nMuon(1, coll="MuonGood"), Zjet_sideR],
-        "DoubleLepton_AK8_AK4_sideL_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), Zjet_sideL],
-        "DoubleLepton_AK8_AK4_sideR_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), Zjet_sideR]
+        # DY
+        "DoubleEle_AK8_AK4_sideL_Zjets" : [get_nElectron(1, coll="ElectronGood"),  Zjet_sideL],
+        "DoubleEle_AK8_AK4_sideR_Zjets" : [get_nElectron(1, coll="ElectronGood"),  Zjet_sideR],
+        "DoubleMuon_AK8_AK4_sideL_Zjets" : [get_nMuon(1, coll="MuonGood"),  Zjet_sideL],
+        "DoubleMuon_AK8_AK4_sideR_Zjets" : [get_nMuon(1, coll="MuonGood"),  Zjet_sideR],
+        "DoubleLepton_AK8_AK4_sideL_Zjets" : [get_nObj_eq(1, coll="LeptonGood"),  Zjet_sideL],
+        "DoubleLepton_AK8_AK4_sideR_Zjets" : [get_nObj_eq(1, coll="LeptonGood"),  Zjet_sideR]
+
     },    
     weights_classes = common_weights,
     weights = {
@@ -134,7 +130,7 @@ cfg = Configurator(
                            ColOut("VBS_dijet_system", ["mass", "pt", "deltaEta"], flatten=False),    
                            ColOut("V_dijet_candidate", ["mass", "pt", "deltaEta"], flatten=False),  
                            ColOut("events", ["zepp_ele", "zepp_muon", "zepp_lep"], flatten=False),
-                           ColOut("events", ["MT_mu_miss", "MT_ele_miss", "MT_lep_miss"], flatten=False),
+                           ColOut("dimuon_candidate", ["mass", "pt", "eta", "deltaEta", "deltaPhi", "deltaR", "charge"]),
                            ColOut("events", ["nCleanJets", "nCleanFatJets", "nBJetGood", "nJet", "nFatJet"], flatten=False),
                            ColOut("CleanSubJet_pair", ["zg"], flatten=False),
                            ],

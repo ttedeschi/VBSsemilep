@@ -69,23 +69,23 @@ def semileptonic(events, params, year, sample, **kwargs):
                 )
         )
     elif params["Z"] is True:
-        mask = (
-            (events.nLeptonGood == 2)
-            & (
-                (
-                    double_muon
-                    & (events.MuonGood.pt[:, 0] > params["pt_leading_muon"])
-                    & (events.MuonGood.pt[:, 1] > params["pt_subleading_muon"])
-                    & (events.MuonGood.charge[:,0] != events.MuonGood.charge[:,1])
-                )
-                | (
-                    double_electron
-                    & (events.ElectronGood.pt[:, 0] > params["pt_leading_electron"])
-                    & (events.ElectronGood.pt[:, 1] > params["pt_subleading_electron"])
-                    & (events.ElectronGood.charge[:,0] != events.ElectronGood.charge[:,1])
-                )
-            )
+        muon_pt = ak.pad_none(events.MuonGood.pt, 2)
+        muon_charge = ak.pad_none(events.MuonGood.charge, 2)
+        electron_pt = ak.pad_none(events.ElectronGood.pt, 2)
+        electron_charge = ak.pad_none(events.ElectronGood.charge, 2)
+        mu_mask = (
+                    (muon_pt[:, 0] > params["pt_leading_muon"]) &
+                    (muon_pt[:, 1] > params["pt_subleading_muon"]) &
+                    (muon_charge[:,0] != muon_charge[:, 1])
         )
+        mu_mask = ak.fill_none(mu_mask, False)
+        el_mask = (
+            (electron_pt[:, 0] > params["pt_leading_electron"]) &
+            (electron_pt[:, 1] > params["pt_subleading_electron"]) &
+            (electron_charge[:,0] != electron_charge[:,1])
+        )
+        el_mask = ak.fill_none(el_mask, False)
+        mask = mu_mask | el_mask
     return ak.where(ak.is_none(mask), False, mask)
 semileptonic_preselW = Cut(
     name="semileptonic_preselW", 
@@ -105,6 +105,8 @@ semileptonic_preselW = Cut(
 semileptonic_preselZ = Cut(
     name="semileptonic_preselZ", 
     params = {
+        "W" : False,
+        "Z" : True,
         "pt_leading_electron" : 20,
         "pt_subleading_electron" : 20,
         "pt_leading_muon" : 20,
@@ -147,8 +149,8 @@ def Vjet_mass(events, params, year, sample, **kwargs):
     )
     |
     (
-           (events.V_dijet_candidate.mass > params["mass_min"]) &
-           (events.V_dijet_candidate.mass < params["mass_max"]) 
+        (events.V_dijet_candidate.mass > params["mass_min"]) &
+        (events.V_dijet_candidate.mass < params["mass_max"]) 
     )
     )
     mask = ak.any(fj_mask, axis=1)
@@ -167,8 +169,8 @@ Vjet_massW = Cut(
     name="Vjet_massW",
     params={
         "VV": True,
-        "mass_min": 60,
-        "mass_max": 100,
+        "mass_min": 65,
+        "mass_max": 105,
         "nJet_min" : 4,
     },
     function=Vjet_mass,
@@ -293,7 +295,10 @@ Zjet_sideR = Cut(
 # transverse mass requirements form W->lv                   #
 #############################################################
 def Wtransverse_mass(events, params, year, sample, **kwargs):
-    mask = (events.MT_lep_miss < params["transverse_max"])
+    mask = (
+        (events.MT_lep_miss < params["transverse_max"]) &
+        (events.MT_lep_miss > 0)
+    )
     return ak.where(ak.is_none(mask), False, mask)
 Wtransverse_mass_presel = Cut(
     name="Wtransverse_mass_presel",
@@ -313,15 +318,29 @@ Wtransverse_mass_presel = Cut(
 # Z->ll dilepton mass                                       #
 #############################################################
 def dilepton_mass(events, params, year, sample, **kwargs):
-    dilepton_candidate = self.events.dilepton_candidate
-    if events.nElectronGood==2 and params["VV"] is True:
+    print(f" dilepton: {events.dimuon_candidate.mass}")
+    print(f" dielectron : {events.dielectron_candidate.mass}")
+    double_muon = events.nMuonGood == 2
+    double_electron = events.nElectronGood == 2
+    if params["VV"] is True:
         mask = (
-            dilepton_candidate.mass > params["mass_min"] & dilepton_candidate.mass < params["mass_max"]
+            ( 
+                (double_muon) &
+                (events.dimuon_candidate.mass > params["mass_min"]) & 
+                (events.dimuon_candidate.mass < params["mass_max"])
+            )
+            |
+            ( 
+                (double_electron) &
+                (events.dielectron_candidate.mass > params["mass_min"]) &
+                (events.dielectron_candidate.mass < params["mass_max"])
+            )
         )
     elif params["DY"] is True:
         mask = (
-            dilepton_candidate.mass > params["mass_max"] & dilepton_candidate.mass < params["mass_min"]
+            (events.dilepton_candidate.mass > params["mass_max"] | events.dilepton_candidate.mass < params["mass_min"])
         )
+    print(mask)
     return ak.where(ak.is_none(mask), False, mask)
 
 dilepton_massZ = Cut(
@@ -348,6 +367,45 @@ dilepton_massDY = Cut(
 
 
 
+
+#############################################################
+# leptons flavour (Z->ll vs tt)                             #
+#############################################################
+def check_flavour(events, params, year, sample, **kwargs):
+    double_leptons = events.nLeptonGood == 2
+    single_electron = events.nElectronGood == 1
+    single_muon = events.nMuonGood == 1
+    if params["VV"] is True:
+        mask=(
+            double_leptons
+            &
+            (
+                (single_electron & ~single_muon)
+                |
+                (single_muon & ~single_electron)
+            )
+        )
+    else: 
+        mask=(
+            double_leptons
+            &
+            single_electron
+            & 
+            single_muon
+        )
+    return ak.where(ak.is_none(mask), False, mask)
+check_flavour_SF = Cut(
+    name="check_flavour_SF",
+    params={ "VV" : True, },
+    function=check_flavour,
+)
+check_flavour_OF =Cut(
+    name="check_flavour_OF",
+    params={ "VV":False,},
+    function=check_flavour,
+)
+#############################################################
+#############################################################
 
 
 
@@ -376,8 +434,39 @@ def cut_function(events, params, year, sample, **kwargs):
     combined_mask = masks[0]
     for m in masks[1:]:
         combined_mask = combined_mask | m
+    return ak.where(ak.is_none(combined_mask), False, combined_mask)
+
+def cut_function_2(events, params, year, sample, **kwargs):
+    masks = []
+    for i, c in enumerate(params["coll"]):
+        objs = getattr(events, c)
+        nmin = params["nMin"][i]
+        mask = ak.num(objs) == nmin
+        masks.append(mask)
+    combined_mask = masks[0]
+    for m in masks[1:]:
+        combined_mask = combined_mask | m
 
     return ak.where(ak.is_none(combined_mask), False, combined_mask)
+
+
+
+
+def skim_double_leptons(events, params, year, sample, **kwargs):
+    mask = (
+        (ak.num(events.Muon) == 2)
+        |
+        (ak.num(events.Electron) == 2)
+    )
+    return ak.where(ak.is_none(mask), False, mask)
+
+skim_double_lepton = Cut(
+    name="skim_double_leptons",
+    params={},
+    function=skim_double_leptons,
+)
+
+
 
 
 def get_nObj_min_or(nMin, minpt,coll, name=None):
@@ -442,3 +531,17 @@ SingleLepton = Cut(
     params={},
     function=single_good_lepton,
 )
+def get_nObj_eq_or(nMin, coll, name=None):
+    if name is None:
+        name = "cut_" + "_or_".join([
+            f"{c}_min{nMin[i]}"
+            for i, c in enumerate(coll)
+        ])
+    return Cut(
+        name=name,
+        params={
+            "coll": coll,
+            "nMin": nMin,
+        },
+        function=cut_function_2,
+    )

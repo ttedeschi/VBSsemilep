@@ -1497,18 +1497,18 @@ object_preselection:
   Muon:
     pt: 0
     eta: 5.0
-    iso: 0.06
+    iso: 1
     id: tightId
   Jet:
     dr_lepton: 0.4
     pt: 30
     eta: 5.0
-    jetId: 2
+    jetId: 0
     btag:
-      wp: M
+      wp: L
   FatJet:
     dr_lepton: 0.8
     pt: 30
     eta: 5.0
     msd: 25
-    jetId: 2
+    jetId: 0

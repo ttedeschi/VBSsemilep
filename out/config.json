@@ -466,7 +466,7 @@
           "sample": "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
           "year": "2023_preBPix",
           "isMC": "True",
-          "xsec": "1.0",
+          "xsec": "421.9",
           "nevents": "93835137",
           "size": "166308832287"
         },
@@ -911,9 +911,9 @@
                 "name": "passthrough_f",
                 "module": "pocket_coffea.lib.cut_functions",
                 "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-                "f_hash": 8789008277194
+                "f_hash": 8738535166656
               },
-              "id": "passthrough__7091586549995978423"
+              "id": "passthrough__-4559401005594267496"
             }
           ]
         },
@@ -932,9 +932,9 @@
                 "name": "passthrough_f",
                 "module": "pocket_coffea.lib.cut_functions",
                 "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-                "f_hash": 8789008277194
+                "f_hash": 8738535166656
               },
-              "id": "passthrough__7091586549995978423"
+              "id": "passthrough__-4559401005594267496"
             }
           ]
         },
@@ -954,9 +954,9 @@
         "name": "<lambda>",
         "module": "pocket_coffea.lib.cut_functions",
         "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-        "f_hash": 8788844244772
+        "f_hash": 8738371128664
       },
-      "id": "nPVgood_1__3725295833537676563"
+      "id": "nPVgood_1__2298986724052179772"
     },
     {
       "name": "cut_Muon_min1_pt1_or_Electron_min1_pt1",
@@ -979,9 +979,9 @@
         "name": "cut_function",
         "module": "custom_cut_functions",
         "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-        "f_hash": 8788845900680
+        "f_hash": 8738372789158
       },
-      "id": "cut_Muon_min1_pt1_or_Electron_min1_pt1__1533727463219297258"
+      "id": "cut_Muon_min1_pt1_or_Electron_min1_pt1__8949180795947584852"
     }
   ],
   "preselections": [
@@ -999,9 +999,9 @@
         "name": "VBS_topology",
         "module": "custom_cut_functions",
         "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-        "f_hash": 8788845900140
+        "f_hash": 8738372788608
       },
-      "id": "VBS_jets_presel__-4010886528608761168"
+      "id": "VBS_jets_presel__58225414148553814"
     },
     {
       "name": "semileptonic_preselW",
@@ -1021,9 +1021,9 @@
         "name": "semileptonic",
         "module": "custom_cut_functions",
         "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-        "f_hash": 8788845900160
+        "f_hash": 8738372788618
       },
-      "id": "semileptonic_preselW__1314196383199507946"
+      "id": "semileptonic_preselW__1860872980000576212"
     },
     {
       "name": "Vjet_massSide",
@@ -1038,9 +1038,23 @@
         "name": "Vjet_massSide",
         "module": "custom_cut_functions",
         "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-        "f_hash": 8788845900620
+        "f_hash": 8738372789078
       },
-      "id": "Vjet_massSide__-1717046741418142950"
+      "id": "Vjet_massSide__-2931891989073505419"
+    },
+    {
+      "name": "Wtransverse_mass_presel",
+      "params": {
+        "transverse_max": 180
+      },
+      "collection": "events",
+      "function": {
+        "name": "Wtransverse_mass",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+        "f_hash": 8738372789128
+      },
+      "id": "Wtransverse_mass_presel__490675868792079334"
     }
   ],
   "categories": {
@@ -1055,30 +1069,13 @@
             "name": "passthrough_f",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008277194
+            "f_hash": 8738535166656
           },
-          "id": "passthrough__7091586549995978423"
+          "id": "passthrough__-4559401005594267496"
         }
       ],
       "SingleEle_AK8": [
         {
-          "name": "Vjet_massW",
-          "params": {
-            "VV": true,
-            "mass_min": 60,
-            "mass_max": 100,
-            "nJet_min": 4
-          },
-          "collection": "events",
-          "function": {
-            "name": "Vjet_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900170
-          },
-          "id": "Vjet_massW__4642906537118813905"
-        },
-        {
           "name": "nBJetGood_eq0",
           "params": {
             "N": 0,
@@ -1089,9 +1086,26 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nBJetGood_eq0__1823982978581625104"
+          "id": "nBJetGood_eq0__1845351252217402759"
+        },
+        {
+          "name": "Vjet_massW",
+          "params": {
+            "VV": true,
+            "mass_min": 65,
+            "mass_max": 105,
+            "nJet_min": 4
+          },
+          "collection": "events",
+          "function": {
+            "name": "Vjet_mass",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8738372788628
+          },
+          "id": "Vjet_massW__9220492289168972127"
         },
         {
           "name": "nCleanFatJet_eq1",
@@ -1104,9 +1118,9 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nCleanFatJet_eq1__-1284738163303540634"
+          "id": "nCleanFatJet_eq1__-6532290403106194795"
         },
         {
           "name": "nElectronGood_1_pt0",
@@ -1120,42 +1134,13 @@
             "name": "nElectron",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151796
+            "f_hash": 8738535212266
           },
-          "id": "nElectronGood_1_pt0__2326047839149387605"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "nElectronGood_1_pt0__8025025621255214988"
         }
       ],
       "SingleEle_AK4": [
         {
-          "name": "nCleanFatJet_eq0",
-          "params": {
-            "N": 0,
-            "coll": "CleanFatJet"
-          },
-          "collection": "events",
-          "function": {
-            "name": "eq_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
-          },
-          "id": "nCleanFatJet_eq0__3724344727788027620"
-        },
-        {
           "name": "nCleanJet_min4",
           "params": {
             "N": 4,
@@ -1166,23 +1151,26 @@
             "name": "min_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
+            "f_hash": 8738535212166
           },
-          "id": "nCleanJet_min4__-2329109658008208038"
+          "id": "nCleanJet_min4__2205124980979658701"
         },
         {
-          "name": "Wtransverse_mass_presel",
+          "name": "Vjet_massW",
           "params": {
-            "transverse_max": 180
+            "VV": true,
+            "mass_min": 65,
+            "mass_max": 105,
+            "nJet_min": 4
           },
           "collection": "events",
           "function": {
-            "name": "Wtransverse_mass",
+            "name": "Vjet_mass",
             "module": "custom_cut_functions",
             "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
+            "f_hash": 8738372788628
           },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "Vjet_massW__9220492289168972127"
         },
         {
           "name": "nBJetGood_eq0",
@@ -1195,9 +1183,9 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nBJetGood_eq0__1823982978581625104"
+          "id": "nBJetGood_eq0__1845351252217402759"
         },
         {
           "name": "nElectronGood_1_pt0",
@@ -1211,30 +1199,43 @@
             "name": "nElectron",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151796
+            "f_hash": 8738535212266
           },
-          "id": "nElectronGood_1_pt0__2326047839149387605"
+          "id": "nElectronGood_1_pt0__8025025621255214988"
         },
         {
-          "name": "Vjet_massW",
+          "name": "nCleanFatJet_eq0",
           "params": {
-            "VV": true,
-            "mass_min": 60,
-            "mass_max": 100,
-            "nJet_min": 4
+            "N": 0,
+            "coll": "CleanFatJet"
           },
           "collection": "events",
           "function": {
-            "name": "Vjet_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900170
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212196
           },
-          "id": "Vjet_massW__4642906537118813905"
+          "id": "nCleanFatJet_eq0__-8627240088740323927"
         }
       ],
       "SingleMuon_AK8": [
         {
+          "name": "nBJetGood_eq0",
+          "params": {
+            "N": 0,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212196
+          },
+          "id": "nBJetGood_eq0__1845351252217402759"
+        },
+        {
           "name": "nMuonGood_1_pt0",
           "params": {
             "N": 1,
@@ -1246,41 +1247,9 @@
             "name": "nMuon",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151806
+            "f_hash": 8738535212276
           },
-          "id": "nMuonGood_1_pt0__-8222426151957996978"
-        },
-        {
-          "name": "Vjet_massW",
-          "params": {
-            "VV": true,
-            "mass_min": 60,
-            "mass_max": 100,
-            "nJet_min": 4
-          },
-          "collection": "events",
-          "function": {
-            "name": "Vjet_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900170
-          },
-          "id": "Vjet_massW__4642906537118813905"
-        },
-        {
-          "name": "nBJetGood_eq0",
-          "params": {
-            "N": 0,
-            "coll": "BJetGood"
-          },
-          "collection": "events",
-          "function": {
-            "name": "eq_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
-          },
-          "id": "nBJetGood_eq0__1823982978581625104"
+          "id": "nMuonGood_1_pt0__-2012060341203820775"
         },
         {
           "name": "nCleanFatJet_eq1",
@@ -1293,40 +1262,75 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nCleanFatJet_eq1__-1284738163303540634"
+          "id": "nCleanFatJet_eq1__-6532290403106194795"
         },
         {
-          "name": "Wtransverse_mass_presel",
+          "name": "Vjet_massW",
           "params": {
-            "transverse_max": 180
+            "VV": true,
+            "mass_min": 65,
+            "mass_max": 105,
+            "nJet_min": 4
           },
           "collection": "events",
           "function": {
-            "name": "Wtransverse_mass",
+            "name": "Vjet_mass",
             "module": "custom_cut_functions",
             "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
+            "f_hash": 8738372788628
           },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "Vjet_massW__9220492289168972127"
         }
       ],
       "SingleMuon_AK4": [
         {
-          "name": "nCleanFatJet_eq0",
+          "name": "nCleanJet_min4",
+          "params": {
+            "N": 4,
+            "coll": "CleanJet"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212166
+          },
+          "id": "nCleanJet_min4__2205124980979658701"
+        },
+        {
+          "name": "Vjet_massW",
+          "params": {
+            "VV": true,
+            "mass_min": 65,
+            "mass_max": 105,
+            "nJet_min": 4
+          },
+          "collection": "events",
+          "function": {
+            "name": "Vjet_mass",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8738372788628
+          },
+          "id": "Vjet_massW__9220492289168972127"
+        },
+        {
+          "name": "nBJetGood_eq0",
           "params": {
             "N": 0,
-            "coll": "CleanFatJet"
+            "coll": "BJetGood"
           },
           "collection": "events",
           "function": {
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nCleanFatJet_eq0__3724344727788027620"
+          "id": "nBJetGood_eq0__1845351252217402759"
         },
         {
           "name": "nMuonGood_1_pt0",
@@ -1340,151 +1344,10 @@
             "name": "nMuon",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151806
+            "f_hash": 8738535212276
           },
-          "id": "nMuonGood_1_pt0__-8222426151957996978"
+          "id": "nMuonGood_1_pt0__-2012060341203820775"
         },
-        {
-          "name": "nCleanJet_min4",
-          "params": {
-            "N": 4,
-            "coll": "CleanJet"
-          },
-          "collection": "events",
-          "function": {
-            "name": "min_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
-          },
-          "id": "nCleanJet_min4__-2329109658008208038"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
-        },
-        {
-          "name": "nBJetGood_eq0",
-          "params": {
-            "N": 0,
-            "coll": "BJetGood"
-          },
-          "collection": "events",
-          "function": {
-            "name": "eq_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
-          },
-          "id": "nBJetGood_eq0__1823982978581625104"
-        },
-        {
-          "name": "Vjet_massW",
-          "params": {
-            "VV": true,
-            "mass_min": 60,
-            "mass_max": 100,
-            "nJet_min": 4
-          },
-          "collection": "events",
-          "function": {
-            "name": "Vjet_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900170
-          },
-          "id": "Vjet_massW__4642906537118813905"
-        }
-      ],
-      "SingleLepton_AK8": [
-        {
-          "name": "nLeptonGood_eq1",
-          "params": {
-            "N": 1,
-            "coll": "LeptonGood"
-          },
-          "collection": "events",
-          "function": {
-            "name": "eq_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
-          },
-          "id": "nLeptonGood_eq1__-5731315707961336830"
-        },
-        {
-          "name": "Vjet_massW",
-          "params": {
-            "VV": true,
-            "mass_min": 60,
-            "mass_max": 100,
-            "nJet_min": 4
-          },
-          "collection": "events",
-          "function": {
-            "name": "Vjet_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900170
-          },
-          "id": "Vjet_massW__4642906537118813905"
-        },
-        {
-          "name": "nBJetGood_eq0",
-          "params": {
-            "N": 0,
-            "coll": "BJetGood"
-          },
-          "collection": "events",
-          "function": {
-            "name": "eq_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
-          },
-          "id": "nBJetGood_eq0__1823982978581625104"
-        },
-        {
-          "name": "nCleanFatJet_eq1",
-          "params": {
-            "N": 1,
-            "coll": "CleanFatJet"
-          },
-          "collection": "events",
-          "function": {
-            "name": "eq_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
-          },
-          "id": "nCleanFatJet_eq1__-1284738163303540634"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
-        }
-      ],
-      "SingleLepton_AK4": [
         {
           "name": "nCleanFatJet_eq0",
           "params": {
@@ -1496,9 +1359,26 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nCleanFatJet_eq0__3724344727788027620"
+          "id": "nCleanFatJet_eq0__-8627240088740323927"
+        }
+      ],
+      "SingleLepton_AK8": [
+        {
+          "name": "nBJetGood_eq0",
+          "params": {
+            "N": 0,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212196
+          },
+          "id": "nBJetGood_eq0__1845351252217402759"
         },
         {
           "name": "nLeptonGood_eq1",
@@ -1511,117 +1391,9 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nLeptonGood_eq1__-5731315707961336830"
-        },
-        {
-          "name": "nCleanJet_min4",
-          "params": {
-            "N": 4,
-            "coll": "CleanJet"
-          },
-          "collection": "events",
-          "function": {
-            "name": "min_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
-          },
-          "id": "nCleanJet_min4__-2329109658008208038"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
-        },
-        {
-          "name": "nBJetGood_eq0",
-          "params": {
-            "N": 0,
-            "coll": "BJetGood"
-          },
-          "collection": "events",
-          "function": {
-            "name": "eq_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
-          },
-          "id": "nBJetGood_eq0__1823982978581625104"
-        },
-        {
-          "name": "Vjet_massW",
-          "params": {
-            "VV": true,
-            "mass_min": 60,
-            "mass_max": 100,
-            "nJet_min": 4
-          },
-          "collection": "events",
-          "function": {
-            "name": "Vjet_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900170
-          },
-          "id": "Vjet_massW__4642906537118813905"
-        }
-      ],
-      "SingleEle_AK8_bjets_ttbar": [
-        {
-          "name": "nElectronGood_1_pt0",
-          "params": {
-            "N": 1,
-            "coll": "ElectronGood",
-            "minpt": 0
-          },
-          "collection": "events",
-          "function": {
-            "name": "nElectron",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151796
-          },
-          "id": "nElectronGood_1_pt0__2326047839149387605"
-        },
-        {
-          "name": "nBJetGood_min2",
-          "params": {
-            "N": 2,
-            "coll": "BJetGood"
-          },
-          "collection": "events",
-          "function": {
-            "name": "min_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
-          },
-          "id": "nBJetGood_min2__6522347887552686312"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "nLeptonGood_eq1__3297946309272682781"
         },
         {
           "name": "nCleanFatJet_eq1",
@@ -1634,12 +1406,44 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nCleanFatJet_eq1__-1284738163303540634"
+          "id": "nCleanFatJet_eq1__-6532290403106194795"
+        },
+        {
+          "name": "Vjet_massW",
+          "params": {
+            "VV": true,
+            "mass_min": 65,
+            "mass_max": 105,
+            "nJet_min": 4
+          },
+          "collection": "events",
+          "function": {
+            "name": "Vjet_mass",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8738372788628
+          },
+          "id": "Vjet_massW__9220492289168972127"
         }
       ],
-      "SingleEle_AK4_bjets_ttbar": [
+      "SingleLepton_AK4": [
+        {
+          "name": "nLeptonGood_eq1",
+          "params": {
+            "N": 1,
+            "coll": "LeptonGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212196
+          },
+          "id": "nLeptonGood_eq1__3297946309272682781"
+        },
         {
           "name": "nCleanJet_min4",
           "params": {
@@ -1651,9 +1455,88 @@
             "name": "min_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
+            "f_hash": 8738535212166
           },
-          "id": "nCleanJet_min4__-2329109658008208038"
+          "id": "nCleanJet_min4__2205124980979658701"
+        },
+        {
+          "name": "Vjet_massW",
+          "params": {
+            "VV": true,
+            "mass_min": 65,
+            "mass_max": 105,
+            "nJet_min": 4
+          },
+          "collection": "events",
+          "function": {
+            "name": "Vjet_mass",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8738372788628
+          },
+          "id": "Vjet_massW__9220492289168972127"
+        },
+        {
+          "name": "nBJetGood_eq0",
+          "params": {
+            "N": 0,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212196
+          },
+          "id": "nBJetGood_eq0__1845351252217402759"
+        },
+        {
+          "name": "nCleanFatJet_eq0",
+          "params": {
+            "N": 0,
+            "coll": "CleanFatJet"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212196
+          },
+          "id": "nCleanFatJet_eq0__-8627240088740323927"
+        }
+      ],
+      "SingleEle_AK8_bjets_ttbar": [
+        {
+          "name": "nBJetGood_min2",
+          "params": {
+            "N": 2,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212166
+          },
+          "id": "nBJetGood_min2__7631997546721748246"
+        },
+        {
+          "name": "nCleanFatJet_eq1",
+          "params": {
+            "N": 1,
+            "coll": "CleanFatJet"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212196
+          },
+          "id": "nCleanFatJet_eq1__-6532290403106194795"
         },
         {
           "name": "nElectronGood_1_pt0",
@@ -1667,24 +1550,12 @@
             "name": "nElectron",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151796
+            "f_hash": 8738535212266
           },
-          "id": "nElectronGood_1_pt0__2326047839149387605"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
-        },
+          "id": "nElectronGood_1_pt0__8025025621255214988"
+        }
+      ],
+      "SingleEle_AK4_bjets_ttbar": [
         {
           "name": "nBJetGood_min2",
           "params": {
@@ -1696,9 +1567,40 @@
             "name": "min_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
+            "f_hash": 8738535212166
           },
-          "id": "nBJetGood_min2__6522347887552686312"
+          "id": "nBJetGood_min2__7631997546721748246"
+        },
+        {
+          "name": "nCleanJet_min4",
+          "params": {
+            "N": 4,
+            "coll": "CleanJet"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212166
+          },
+          "id": "nCleanJet_min4__2205124980979658701"
+        },
+        {
+          "name": "nElectronGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "ElectronGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nElectron",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212266
+          },
+          "id": "nElectronGood_1_pt0__8025025621255214988"
         }
       ],
       "SingleMuon_AK8_bjets_ttbar": [
@@ -1714,38 +1616,9 @@
             "name": "nMuon",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151806
+            "f_hash": 8738535212276
           },
-          "id": "nMuonGood_1_pt0__-8222426151957996978"
-        },
-        {
-          "name": "nBJetGood_eq2",
-          "params": {
-            "N": 2,
-            "coll": "BJetGood"
-          },
-          "collection": "events",
-          "function": {
-            "name": "eq_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
-          },
-          "id": "nBJetGood_eq2__-5276676563523557610"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "nMuonGood_1_pt0__-2012060341203820775"
         },
         {
           "name": "nCleanFatJet_eq1",
@@ -1758,27 +1631,27 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nCleanFatJet_eq1__-1284738163303540634"
-        }
-      ],
-      "SingleMuon_AK4_bjets_ttbar": [
+          "id": "nCleanFatJet_eq1__-6532290403106194795"
+        },
         {
-          "name": "nCleanJet_min4",
+          "name": "nBJetGood_eq2",
           "params": {
-            "N": 4,
-            "coll": "CleanJet"
+            "N": 2,
+            "coll": "BJetGood"
           },
           "collection": "events",
           "function": {
-            "name": "min_nObj",
+            "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
+            "f_hash": 8738535212196
           },
-          "id": "nCleanJet_min4__-2329109658008208038"
-        },
+          "id": "nBJetGood_eq2__2732913434480924864"
+        }
+      ],
+      "SingleMuon_AK4_bjets_ttbar": [
         {
           "name": "nMuonGood_1_pt0",
           "params": {
@@ -1791,23 +1664,24 @@
             "name": "nMuon",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151806
+            "f_hash": 8738535212276
           },
-          "id": "nMuonGood_1_pt0__-8222426151957996978"
+          "id": "nMuonGood_1_pt0__-2012060341203820775"
         },
         {
-          "name": "Wtransverse_mass_presel",
+          "name": "nCleanJet_min4",
           "params": {
-            "transverse_max": 180
+            "N": 4,
+            "coll": "CleanJet"
           },
           "collection": "events",
           "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212166
           },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "nCleanJet_min4__2205124980979658701"
         },
         {
           "name": "nBJetGood_min2",
@@ -1820,13 +1694,28 @@
             "name": "min_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
+            "f_hash": 8738535212166
           },
-          "id": "nBJetGood_min2__6522347887552686312"
+          "id": "nBJetGood_min2__7631997546721748246"
         }
       ],
       "SingleLepton_AK8_bjets_ttbar": [
         {
+          "name": "nBJetGood_min2",
+          "params": {
+            "N": 2,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212166
+          },
+          "id": "nBJetGood_min2__7631997546721748246"
+        },
+        {
           "name": "nLeptonGood_eq1",
           "params": {
             "N": 1,
@@ -1837,23 +1726,9 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nLeptonGood_eq1__-5731315707961336830"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "nLeptonGood_eq1__3297946309272682781"
         },
         {
           "name": "nCleanJet_min4",
@@ -1866,28 +1741,28 @@
             "name": "min_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
+            "f_hash": 8738535212166
           },
-          "id": "nCleanJet_min4__-2329109658008208038"
-        },
-        {
-          "name": "nBJetGood_min2",
-          "params": {
-            "N": 2,
-            "coll": "BJetGood"
-          },
-          "collection": "events",
-          "function": {
-            "name": "min_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
-          },
-          "id": "nBJetGood_min2__6522347887552686312"
+          "id": "nCleanJet_min4__2205124980979658701"
         }
       ],
       "SingleLepton_AK4_bjets_ttbar": [
         {
+          "name": "nBJetGood_min2",
+          "params": {
+            "N": 2,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212166
+          },
+          "id": "nBJetGood_min2__7631997546721748246"
+        },
+        {
           "name": "nLeptonGood_eq1",
           "params": {
             "N": 1,
@@ -1898,23 +1773,9 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nLeptonGood_eq1__-5731315707961336830"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "nLeptonGood_eq1__3297946309272682781"
         },
         {
           "name": "nCleanJet_min4",
@@ -1927,24 +1788,9 @@
             "name": "min_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
+            "f_hash": 8738535212166
           },
-          "id": "nCleanJet_min4__-2329109658008208038"
-        },
-        {
-          "name": "nBJetGood_min2",
-          "params": {
-            "N": 2,
-            "coll": "BJetGood"
-          },
-          "collection": "events",
-          "function": {
-            "name": "min_nObj",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151696
-          },
-          "id": "nBJetGood_min2__6522347887552686312"
+          "id": "nCleanJet_min4__2205124980979658701"
         }
       ],
       "SingleEle_AK8_AK4_sideL_Wjets": [
@@ -1958,9 +1804,9 @@
             "name": "sideL",
             "module": "custom_cut_functions",
             "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900630
+            "f_hash": 8738372789088
           },
-          "id": "Wjet_sideL__-875779341520303800"
+          "id": "Wjet_sideL__2780161041892897298"
         },
         {
           "name": "nElectronGood_1_pt0",
@@ -1974,23 +1820,9 @@
             "name": "nElectron",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151796
+            "f_hash": 8738535212266
           },
-          "id": "nElectronGood_1_pt0__2326047839149387605"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "nElectronGood_1_pt0__8025025621255214988"
         }
       ],
       "SingleEle_AK8_AK4_sideR_Wjets": [
@@ -2004,9 +1836,9 @@
             "name": "sideR",
             "module": "custom_cut_functions",
             "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900640
+            "f_hash": 8738372789098
           },
-          "id": "Wjet_sideR__-188909343074084199"
+          "id": "Wjet_sideR__-3393096451761135901"
         },
         {
           "name": "nElectronGood_1_pt0",
@@ -2020,26 +1852,28 @@
             "name": "nElectron",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151796
+            "f_hash": 8738535212266
           },
-          "id": "nElectronGood_1_pt0__2326047839149387605"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "nElectronGood_1_pt0__8025025621255214988"
         }
       ],
       "SingleMuon_AK8_AK4_sideL_Wjets": [
+        {
+          "name": "nMuonGood_1_pt0",
+          "params": {
+            "N": 1,
+            "coll": "MuonGood",
+            "minpt": 0
+          },
+          "collection": "events",
+          "function": {
+            "name": "nMuon",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8738535212276
+          },
+          "id": "nMuonGood_1_pt0__-2012060341203820775"
+        },
         {
           "name": "Wjet_sideL",
           "params": {
@@ -2050,10 +1884,12 @@
             "name": "sideL",
             "module": "custom_cut_functions",
             "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900630
+            "f_hash": 8738372789088
           },
-          "id": "Wjet_sideL__-875779341520303800"
-        },
+          "id": "Wjet_sideL__2780161041892897298"
+        }
+      ],
+      "SingleMuon_AK8_AK4_sideR_Wjets": [
         {
           "name": "nMuonGood_1_pt0",
           "params": {
@@ -2066,26 +1902,10 @@
             "name": "nMuon",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151806
+            "f_hash": 8738535212276
           },
-          "id": "nMuonGood_1_pt0__-8222426151957996978"
+          "id": "nMuonGood_1_pt0__-2012060341203820775"
         },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
-        }
-      ],
-      "SingleMuon_AK8_AK4_sideR_Wjets": [
         {
           "name": "Wjet_sideR",
           "params": {
@@ -2096,39 +1916,9 @@
             "name": "sideR",
             "module": "custom_cut_functions",
             "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900640
+            "f_hash": 8738372789098
           },
-          "id": "Wjet_sideR__-188909343074084199"
-        },
-        {
-          "name": "nMuonGood_1_pt0",
-          "params": {
-            "N": 1,
-            "coll": "MuonGood",
-            "minpt": 0
-          },
-          "collection": "events",
-          "function": {
-            "name": "nMuon",
-            "module": "pocket_coffea.lib.cut_functions",
-            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151806
-          },
-          "id": "nMuonGood_1_pt0__-8222426151957996978"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "Wjet_sideR__-3393096451761135901"
         }
       ],
       "SingleLepton_AK8_AK4_sideL_Wjets": [
@@ -2143,9 +1933,9 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nLeptonGood_eq1__-5731315707961336830"
+          "id": "nLeptonGood_eq1__3297946309272682781"
         },
         {
           "name": "Wjet_sideL",
@@ -2157,23 +1947,9 @@
             "name": "sideL",
             "module": "custom_cut_functions",
             "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900630
+            "f_hash": 8738372789088
           },
-          "id": "Wjet_sideL__-875779341520303800"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "Wjet_sideL__2780161041892897298"
         }
       ],
       "SingleLepton_AK8_AK4_sideR_Wjets": [
@@ -2188,9 +1964,9 @@
             "name": "eq_nObj",
             "module": "pocket_coffea.lib.cut_functions",
             "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
-            "f_hash": 8789008151726
+            "f_hash": 8738535212196
           },
-          "id": "nLeptonGood_eq1__-5731315707961336830"
+          "id": "nLeptonGood_eq1__3297946309272682781"
         },
         {
           "name": "Wjet_sideR",
@@ -2202,23 +1978,9 @@
             "name": "sideR",
             "module": "custom_cut_functions",
             "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900640
+            "f_hash": 8738372789098
           },
-          "id": "Wjet_sideR__-188909343074084199"
-        },
-        {
-          "name": "Wtransverse_mass_presel",
-          "params": {
-            "transverse_max": 180
-          },
-          "collection": "events",
-          "function": {
-            "name": "Wtransverse_mass",
-            "module": "custom_cut_functions",
-            "src_file": "/afs/cern.ch/user/l/ldellape/VBSsemilep/custom_cut_functions.py",
-            "f_hash": 8788845900670
-          },
-          "id": "Wtransverse_mass_presel__810425257227632547"
+          "id": "Wjet_sideR__-3393096451761135901"
         }
       ]
     },

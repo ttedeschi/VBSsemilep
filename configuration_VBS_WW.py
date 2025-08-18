@@ -10,15 +10,11 @@ from skim_dictionary import skim_dict
 from pocket_coffea.lib.weights.common import common_weights
 import cloudpickle
 from pocket_coffea.lib.columns_manager import ColOut
-
+import os
 import custom_cut_functions 
-
 cloudpickle.register_pickle_by_value(workflowVBS)
 cloudpickle.register_pickle_by_value(custom_cut_functions)
-
-import os
 localdir = os.path.dirname(os.path.abspath(__file__))
-
 from pocket_coffea.parameters import defaults
 default_parameters = defaults.get_default_parameters()
 defaults.register_configuration_dir("config_dir", localdir+"/parameters")
@@ -29,10 +25,6 @@ parameters = defaults.merge_parameters_from_files(default_parameters,
                                     f"{localdir}/parameters/btagging.yaml",
                                     update=True                                    
                                     )
-
-
-
-parquet = False
 cfg = Configurator(
     parameters=parameters,
     datasets = {
@@ -40,60 +32,46 @@ cfg = Configurator(
         "jsons" : [#f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
                    f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
                    f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   #f"{localdir}/datasets/TbarWplus/*.json"
+                 #  f"{localdir}/datasets/TbarWplus/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8.json"
                    ],
         "filter" : {
-            "samples" : ["ZZLL", "ZZTT", "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8"],
+            "samples" : ["ssWWLL", "ssWWTT", "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", "TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8"],
         }
         }, 
     workflow=VBS_WV_Processor,
     skim = [
             get_nPVgood(1), 
             get_nObj_min_or(
-                [skim_dict["Wlep_V"]["Muon"]["ptMin"],skim_dict["Wlep_V"]["Electron"]["ptMin"]], 
-                [skim_dict["Wlep_V"]["Muon"]["nMin"], skim_dict["Wlep_V"]["Electron"]["nMin"]],
+                [skim_dict["Wlep_V"]["Muon"]["nMin"],skim_dict["Wlep_V"]["Electron"]["nMin"]], 
+                [skim_dict["Wlep_V"]["Muon"]["ptMin"], skim_dict["Wlep_V"]["Electron"]["ptMin"]],
                 ["Muon", "Electron"]),
             ],
-    
-    # signal
-    # Vjet_massSide always return true, flag for Wjets signal and bkg, to be moved in the categorization
-    preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSideW],
-
-    
-    
-    #preselections = [passthrough],
-    # AK8 --> V boson from FatJet
-    # AK4 --> V boson from 2 Jets
-    
-    
-    # Vjet_massW ---> on-shell W bosons
-    # Wjet_sideX ---> off-shell W bosons
+    preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSideW, Wtransverse_mass_presel],
     categories= {
         "baseline" : [passthrough],
         
-        
-        "SingleEle_AK8" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW, Wtransverse_mass_presel],
-        "SingleEle_AK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW, Wtransverse_mass_presel],
-        "SingleMuon_AK8" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW, Wtransverse_mass_presel],
-        "SingleMuon_AK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW, Wtransverse_mass_presel],
-        "SingleLepton_AK8" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(1, coll="CleanFatJet") , get_nObj_eq(0, coll="BJetGood"), Vjet_massW, Wtransverse_mass_presel],
-        "SingleLepton_AK4" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(4, coll="CleanJet") , get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW, Wtransverse_mass_presel],
+        "SingleEle_AK8" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW],
+        "SingleEle_AK4" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW],
+        "SingleMuon_AK8" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW],
+        "SingleMuon_AK4" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4 , coll="CleanJet"),  get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW],
+        "SingleLepton_AK8" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(1, coll="CleanFatJet") , get_nObj_eq(0, coll="BJetGood"), Vjet_massW],
+        "SingleLepton_AK4" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(4, coll="CleanJet") , get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW],
 
         # ttbar/tbarWplus
-        "SingleEle_AK8_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_min(2, coll="BJetGood"), Wtransverse_mass_presel],
-        "SingleEle_AK4_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"), get_nObj_min(2, coll="BJetGood"), Wtransverse_mass_presel],
-        "SingleMuon_AK8_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_eq(2, coll="BJetGood"), Wtransverse_mass_presel],
-        "SingleMuon_AK4_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4, coll="CleanJet"), get_nObj_min(2, coll="BJetGood"), Wtransverse_mass_presel],
-        "SingleLepton_AK8_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(4, coll="CleanJet"), get_nObj_min(2, coll="BJetGood"), Wtransverse_mass_presel],
-        "SingleLepton_AK4_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(4, coll="CleanJet"), get_nObj_min(2, coll="BJetGood"), Wtransverse_mass_presel],
+        "SingleEle_AK8_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_min(2, coll="BJetGood")],
+        "SingleEle_AK4_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_min(4 , coll="CleanJet"), get_nObj_min(2, coll="BJetGood")],
+        "SingleMuon_AK8_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_eq(2, coll="BJetGood")],
+        "SingleMuon_AK4_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(4, coll="CleanJet"), get_nObj_min(2, coll="BJetGood")],
+        "SingleLepton_AK8_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(4, coll="CleanJet"), get_nObj_min(2, coll="BJetGood")],
+        "SingleLepton_AK4_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(4, coll="CleanJet"), get_nObj_min(2, coll="BJetGood")],
         
         #WtoLNu-XJets (check contamination in the jet mass window of SR)
-        "SingleEle_AK8_AK4_sideL_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wtransverse_mass_presel, Wjet_sideL],
-        "SingleEle_AK8_AK4_sideR_Wjets" : [get_nElectron(1, coll="ElectronGood"), Wtransverse_mass_presel,Wjet_sideR],
-        "SingleMuon_AK8_AK4_sideL_Wjets" : [get_nMuon(1, coll="MuonGood"), Wtransverse_mass_presel, Wjet_sideL],
-        "SingleMuon_AK8_AK4_sideR_Wjets" : [get_nMuon(1, coll="MuonGood"), Wtransverse_mass_presel, Wjet_sideR],
-        "SingleLepton_AK8_AK4_sideL_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), Wtransverse_mass_presel, Wjet_sideL],
-        "SingleLepton_AK8_AK4_sideR_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), Wtransverse_mass_presel, Wjet_sideR]
+        "SingleEle_AK8_AK4_sideL_Wjets" : [get_nElectron(1, coll="ElectronGood"),  Wjet_sideL],
+        "SingleEle_AK8_AK4_sideR_Wjets" : [get_nElectron(1, coll="ElectronGood"),  Wjet_sideR],
+        "SingleMuon_AK8_AK4_sideL_Wjets" : [get_nMuon(1, coll="MuonGood"),  Wjet_sideL],
+        "SingleMuon_AK8_AK4_sideR_Wjets" : [get_nMuon(1, coll="MuonGood"),  Wjet_sideR],
+        "SingleLepton_AK8_AK4_sideL_Wjets" : [get_nObj_eq(1, coll="LeptonGood"),  Wjet_sideL],
+        "SingleLepton_AK8_AK4_sideR_Wjets" : [get_nObj_eq(1, coll="LeptonGood"),  Wjet_sideR]
     },    
     weights_classes = common_weights,
     weights = {

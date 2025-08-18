@@ -109,7 +109,7 @@
             "sample" : "ZZLL",
             "year" : "2023_preBPix",
             "isMC" : "True",
-            "xsec" : "0.03", 
+            "xsec" : "0.0078", 
             "nevents" : "100000"
         },
         "files" : [
@@ -130,7 +130,7 @@
             "sample" : "ZZTT",
             "year" : "2023_preBPix",
             "isMC" : "True",
-            "xsec" : "0.03", 
+            "xsec" : " 0.0744", 
             "nevents" : "100000"
         },
         "files" : [

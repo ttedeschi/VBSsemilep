@@ -3,14 +3,17 @@ import numpy as np
 import os
 import glob
 import ROOT
-
-
+from sample import samples
 path = "/eos/user/l/ldellape/VBS/parquet"
-category="baseline"
 norm_luminosity=False
-norm_events=False
+polarized=True
 
 
+#tag="WW"
+tag="ZZ"
+
+
+category="baseline"
 #category="signal_AK8"
 #category="signal_AK4"
 #category="CR_TTbar"
@@ -18,47 +21,8 @@ norm_events=False
 #category="CR_R_Wjets"
 
 
-if category == "baseline":
-    parquet_patterns = [
-        f"{path}/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8_2023_preBPix/{category}/*.parquet",
-        f"{path}/ssWW_TT_mg5_madspin/{category}/*.parquet",
-        f"{path}/ssWW_LL_mg5_madspin/{category}/*.parquet",
-        f"{path}/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/{category}/*.parquet"
-    ]
-    labels = ["TTtoLNu2Q", "ssWW_TT", "ssWW_LL", "WLtoLNu_2Jets"]
-elif category=="signal_AK8":
-    parquet_patterns = [
-        f"{path}/ssWW_TT_mg5_madspin/SingleLepton_AK8/*.parquet",
-        f"{path}/ssWW_LL_mg5_madspin/SingleLepton_AK8/*.parquet",
-        f"{path}/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8_2023_preBPix/SingleLepton_AK8/*.parquet",
-        f"{path}/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/SingleLepton_AK8/*.parquet",
-    ]
-    labels = ["ssWW_TT", "ssWW_LL", "TTtoLNu2Q", "WLtoLNu_2Jets"]
-elif category=="signal_AK4":
-    parquet_patterns = [
-        f"{path}/ssWW_TT_mg5_madspin/SingleLepton_AK4/*.parquet",
-        f"{path}/ssWW_LL_mg5_madspin/SingleLepton_AK4/*.parquet",
-        f"{path}/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8_2023_preBPix/SingleLepton_AK4/*.parquet",
-        f"{path}/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/SingleLepton_AK4/*.parquet",
-    ]
-    labels = ["ssWW_TT", "ssWW_LL", "TTtoLNu2Q", "WLtoLNu_2Jets"]
-elif category=="CR_TTbar":
-    parquet_patterns = [
-        f"{path}/ssWW_TT_mg5_madspin/SingleEle_AK8_bjets_ttbar/*.parquet",
-        f"{path}/ssWW_TT_mg5_madspin/SingleMuon_AK8_bjets_ttbar/*.parquet",
-        f"{path}/ssWW_LL_mg5_madspin/SingleEle_AK8_bjets_ttbar/*.parquet",
-        f"{path}/ssWW_LL_mg5_madspin/SingleMuon_AK8_bjets_ttbar/*.parquet",
-        f"{path}/ssWW_TT_mg5_madspin/SingleEle_AK4_bjets_ttbar/*.parquet",
-        f"{path}/ssWW_TT_mg5_madspin/SingleMuon_AK4_bjets_ttbar/*.parquet",
-        f"{path}/ssWW_LL_mg5_madspin/SingleEle_AK4_bjets_ttbar/*.parquet",
-        f"{path}/ssWW_LL_mg5_madspin/SingleMuon_AK4_bjets_ttbar/*.parquet",
-        f"{path}/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8_2023_preBPix/SingleEle_AK8_bjets_ttbar/*.parquet",
-        f"{path}/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8_2023_preBPix/SingleMuon_AK8_bjets_ttbar/*.parquet",
-        f"{path}/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/SingleEle_AK8_bjets_ttbar/*.parquet",
-        f"{path}/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_2023_preBPix/SingleMuon_AK8_bjets_ttbar/*.parquet"
-    ]
-    labels = ["ssWW_TT", "ssWW_TT", "ssWW_TT", "ssWW_TT", "ssWW_LL", "ssWW_LL", "ssWW_LL", "ssWW_LL","TTtoLNu2Q", "TTtoLNu2Q", "TTtoLNu2Q" , "TTtoLNu2Q", "WLtoLNu_2Jets","WLtoLNu_2Jets", "WLtoLNu_2Jets", "WtoLNu_2Jets"]
-    
+
+parquet_patterns, labels = samples(category, tag, polarized)
 
 def load_awkward_parquet(pattern):
     files = glob.glob(pattern)
@@ -78,12 +42,20 @@ def sum_lumi(tag):
         log_path="log_TTtoLNu2Q.txt"
     elif tag == "WLtoLNu_2Jets":
         log_path ="log_WtoLNu-XJets.txt"
+    elif tag == "TTto2L2Nu-2Jets":
+        log_path = "log_TTto2L2Nu.txt"
+    elif tag == "DYto2L-4Jets":
+        log_path = "log_DY.txt"
+    elif tag == "ZZ_LL":
+        log_path = "log_ZZLL_mg5_madspin.txt"
+    elif tag == "ZZ_TT":
+        log_path = "log_ZZTT_mg5_madspin.txt"
     else: 
         return 0.0
     total_lumi = 0.0
 
     if not os.path.exists(log_path):
-        print(f"No log file found for dataset {dataset}")
+        print(f"No log file found for dataset {log_path}")
         return 0.0
 
     with open(log_path, "r") as f:
@@ -101,7 +73,10 @@ datasets = [load_awkward_parquet(p) for p in parquet_patterns]
 
 
 lumis = [sum_lumi(label) for label in labels]
-target_lumi = sum_lumi("ssWW_TT")
+if tag=="WW":
+    target_lumi = sum_lumi("ssWW_TT")
+elif tag=="ZZ":
+    target_lumi = sum_lumi("ZZ_TT")
 lumis = np.array(lumis, dtype=float)
 print(lumis)
 scaling_factors = target_lumi / lumis
@@ -112,7 +87,7 @@ c = ROOT.TCanvas("c", "Comparison", 800, 600)
 ROOT.gStyle.SetOptStat(0)
 
 field_name = ["lumi", "CleanFatJet_pt", "CleanFatJet_eta", "CleanFatJet_msoftdrop", "CleanFatJet_mass", "events_zepp_lep", "CleanSubJet_pair_zg", 
-              "CleanFatJet_tau21", "events_nCleanJets", "events_nFatJet", "events_nCleanFatJets", "events_nBJetGood", "events_MT_lep_miss", "ElectronGood_pt", "MuonGood_pt", "V_dijet_candidate_mass", "V_dijet_candidate_pt",
+              "CleanFatJet_tau21", "events_nCleanJets", "events_nFatJet", "events_nCleanFatJets", "events_nBJetGood", "ElectronGood_pt", "MuonGood_pt", "V_dijet_candidate_mass", "V_dijet_candidate_pt",
               "VBS_dijet_system_pt", "VBS_dijet_system_mass", "VBS_dijet_system_deltaEta", "events_MT_ele_miss", "events_MT_mu_miss", "events_MT_lep_miss"]
 
 number_events = []
@@ -120,53 +95,103 @@ for (data,label) in zip(datasets, labels):
     number_events.append(len(data))  
     print(f"{len(data)} events in {label}")  
 
+ROOT.gStyle.SetOptStat(0)
+ROOT.gStyle.SetTitleFontSize(0.04)
+ROOT.gStyle.SetLabelSize(0.04, "XY")
+ROOT.gStyle.SetTitleSize(0.045, "XY")
+ROOT.gStyle.SetLegendBorderSize(0)
 
 for var in field_name:
-    hists = []
-    for i, (data, label) in enumerate(zip(datasets, labels)):
+    hists = {}
+
+    global_min = None
+    global_max = None
+    is_discrete = var in [
+        "events_nCleanJet",
+        "events_nCleanFatJets",
+        "events_nFatJet",
+        "events_nJet",
+        "events_nBJetGood",
+    ]
+
+    # --- find global min/max for continuous variables ---
+    for data in datasets:
         if var in data.fields:
             vals = ak.flatten(data[var], axis=None)
-            if var =="events_nCleanFatJets":
-                print("ok")
-                print(vals)
-            if len(vals) == 0:
-                print(f"[WARNING] No entries for variable '{var}' in dataset '{label}'")
-                continue
-            existing = next((h for (lab, h) in hists if lab == label), None)
-            if existing:
-                for v in vals:
-                    existing.Fill(v)
-            else:
-                if var not in ["events_nCleanJet","events_nCleanFatJets", "events_nFatJet", "events_nJet", "events_nBJetGood"]:
-                    h = ROOT.TH1F(f"h_{var}_{i}", label, 50, min(vals), max(vals))
-                else:
-                    h = ROOT.TH1F(f"h_{var}_{i}", label, 8, 0, 8)
-                for v in vals:
-                    h.Fill(v)
-                h.SetLineColor(i + 1)
-                h.SetLineWidth(2)
-                if norm_luminosity is True:
-                    h.Scale(scaling_factors[i])
-                    
-                hists.append((label, h))
+            if len(vals) > 0 and not is_discrete:
+                vmin = float(min(vals))
+                vmax = float(max(vals))
+                global_min = vmin if global_min is None else min(global_min, vmin)
+                global_max = vmax if global_max is None else max(global_max, vmax)
 
-    c = ROOT.TCanvas(f"c_{var}", f"Canvas for {var}", 800, 600)
-    legend = ROOT.TLegend(0.7, 0.7, 0.9, 0.9)
+    # --- build histograms ---
+    for i, (data, label) in enumerate(zip(datasets, labels)):
+        if var not in data.fields:
+            continue
 
-    for idx, (label, h) in enumerate(hists):
-        draw_option = "hist" if idx == 0 else "hist same"
+        vals = ak.flatten(data[var], axis=None)
+        if len(vals) == 0:
+            print(f"[WARNING] No entries for variable '{var}' in dataset '{label}'")
+            continue
+
+        if not is_discrete:
+            if "miss" in var:
+                h = ROOT.TH1F(f"h_{var}_{i}", label, 50, 0, global_max)
+            else: 
+                h = ROOT.TH1F(f"h_{var}_{i}", label, 50, global_min, global_max)
+        else:
+            h = ROOT.TH1F(f"h_{var}_{i}", label, 8, 0, 8)
+
+        for v in vals:
+            h.Fill(v)
+
+        if norm_luminosity:
+            h.Scale(scaling_factors[i])
+
+        # --- merge if label already exists ---
+        if label in hists:
+            hists[label].Add(h)
+        else:
+            h.SetLineWidth(2)
+            hists[label] = h
+
+    if not hists:
+        continue
+
+    # --- Overlay plot ---
+    c_overlay = ROOT.TCanvas(f"c_{var}_overlay", f"Overlay: {var}", 800, 600)
+    legend_overlay = ROOT.TLegend(0.7, 0.7, 0.9, 0.9)
+
+    for idx, (label, h) in enumerate(hists.items()):
+        h.SetLineColor(idx + 1)
+        draw_option = "hist " if idx == 0 else "hist same"
         h.Draw(draw_option)
-        h.GetXaxis().SetTitle(var)
-        h.GetYaxis().SetTitle("Entries")
-        h.SetTitle(f"{var}   {category}")
-        legend.AddEntry(h, label, "l")
+        if idx == 0:
+            h.GetXaxis().SetTitle(var)
+            h.GetYaxis().SetTitle("Entries")
+            h.SetTitle(f"{var}   {category}")
+        legend_overlay.AddEntry(h, label, "l")
 
-    if hists:  
-        hists[0][1].GetXaxis().SetTitle(var)
-        hists[0][1].GetYaxis().SetTitle("Entries")
-
-    legend.Draw()
-    c.Update()
-    c.Draw()
+    legend_overlay.Draw()
     os.makedirs(f"./plots/{category}", exist_ok=True)
-    c.SaveAs(f"./plots/{category}/{var}_{category}.pdf")
+    c_overlay.SaveAs(f"./plots/{category}/{var}_{category}_overlay.pdf")
+
+    # --- Stack plot ---
+    c_stack = ROOT.TCanvas(f"c_{var}_stack", f"Stack: {var}", 800, 600)
+    stack = ROOT.THStack(f"hs_{var}", f"{var}   {category}")
+    legend_stack = ROOT.TLegend(0.7, 0.7, 0.9, 0.9)
+    legend_stack.SetFillStyle(0)
+
+    for idx, (label, h) in enumerate(hists.items()):
+        h.SetFillColorAlpha(idx + 1, 0.4)
+        stack.Add(h)
+        legend_stack.AddEntry(h, label, "f")
+
+    stack.Draw("hist")
+    stack.GetXaxis().SetTitle(var)
+    stack.GetYaxis().SetTitle("Entries")
+    stack.SetMinimum(0)
+    stack.SetMaximum(stack.GetMaximum() * 1.2)
+    legend_stack.Draw()
+
+    c_stack.SaveAs(f"./plots/{category}/{var}_{category}_stack.pdf")

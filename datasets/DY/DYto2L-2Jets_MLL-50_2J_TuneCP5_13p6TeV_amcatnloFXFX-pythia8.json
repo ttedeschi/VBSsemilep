@@ -5,7 +5,7 @@
             "sample": "DYto2L-2Jets_MLL-50_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
             "year": "2023_postBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "385.5",
             "nevents": "68804529",
             "size": "125717040535"
         },

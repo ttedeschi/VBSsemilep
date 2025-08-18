@@ -6,3 +6,5 @@ __pycache__
 ./out
 *.txt
 ./out_2
+./out_3
+./plots
