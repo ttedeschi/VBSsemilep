@@ -4,12 +4,10 @@
             "sample" : "ssWWLL",
             "year" : "2023_preBPix",
             "isMC" : "True",
-            "xsec" : "0.03", 
+            "xsec" : "0.02143", 
             "nevents" : "100000"
         },
         "files" : [
-            "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/nanov12_samples/MadSpin/WW_LL/ssWW_LL_madspin_nanov12_Run3Summer23wmLHEGS_merged.root",
-            "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/nanov12_samples/MadSpin/WW_TT/ssWW_TT_madspin_nanoAODv12_Run3Summer23wmLHEGS_merged.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_1/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_2/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_3/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
@@ -18,8 +16,6 @@
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_6/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_7/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_8/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
-            "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_9/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
-            "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_9/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_10/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_20/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_21/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
@@ -32,8 +28,6 @@
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_28/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_29/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWLL/job_30/MadSpin_WWLL_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
-            "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_1/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
-            "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_1/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_1/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_2/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_LL_MadSpin_customMINIAOD/job_3/ssWW_LL_MadSpin_customMINIAOD_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
@@ -63,7 +57,7 @@
             "sample" : "ssWWTT",
             "year" : "2023_preBPix",
             "isMC" : "True",
-            "xsec" : "0.03", 
+            "xsec" : "0.1589", 
             "nevents" : "100000"
         },
         "files" : [
@@ -90,7 +84,6 @@
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_29/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/MadSpin_WWTT/job_30/MadSpin_WWTT_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_1/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
-                        "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_1/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_2/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_3/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_4/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
@@ -99,7 +92,6 @@
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_7/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_8/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_9/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
-            "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_10/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_11/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_12/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_13/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
@@ -109,8 +101,7 @@
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_17/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_18/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
             "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_19/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root",
-                  "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_20/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root"
-
+            "root://eosuser.cern.ch://eos/user/l/ldellape/VBS/VBS_cards/privateMCproduction/jobs_output/ssWW_TT_customMINI/job_20/ssWW_TT_customMINI_Run3Summer23wmLHEGS/root/Nanov12/NanoAODv12_Run3Summer23wmLHEGS.root"
         ]
     },
     "ZZLL_mg5_madspin" : {
@@ -118,7 +109,7 @@
             "sample" : "ZZLL",
             "year" : "2023_preBPix",
             "isMC" : "True",
-            "xsec" : "0.03", 
+            "xsec" : "0.0078", 
             "nevents" : "100000"
         },
         "files" : [
@@ -139,7 +130,7 @@
             "sample" : "ZZTT",
             "year" : "2023_preBPix",
             "isMC" : "True",
-            "xsec" : "0.03", 
+            "xsec" : " 0.0744", 
             "nevents" : "100000"
         },
         "files" : [
