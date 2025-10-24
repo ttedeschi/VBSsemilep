@@ -29,14 +29,14 @@ cfg = Configurator(
     parameters=parameters,
     datasets = {
         "tag" : "VBS_ssWW",
-        "jsons" : [#f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
+        "jsons" : [f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
                    #f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
                    #f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8.json",
                    #f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8.json",
                    #f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
                    #f"{localdir}/datasets/TbarWplus/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8.json",
-                   f"{localdir}/datasets/VVV/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
-                   f"{localdir}/datasets/VVV/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
+                 #  f"{localdir}/datasets/VVV/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
+                 #  f"{localdir}/datasets/VVV/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
                    ],
         "filter" : {
             "samples" : [
@@ -45,10 +45,10 @@ cfg = Configurator(
                 "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", 
                 "TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8",
                 
-                "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", "
+                "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", 
                 "TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8", 
                 "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8", 
-                "ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8"
+                "ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8",
                 
             ],
         }
