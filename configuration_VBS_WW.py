@@ -29,13 +29,28 @@ cfg = Configurator(
     parameters=parameters,
     datasets = {
         "tag" : "VBS_ssWW",
-        "jsons" : [#f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
-                   f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                 #  f"{localdir}/datasets/TbarWplus/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8.json"
+        "jsons" : [f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
+                   #f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
+                   #f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8.json",
+                   #f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8.json",
+                   #f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
+                   #f"{localdir}/datasets/TbarWplus/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8.json",
+                 #  f"{localdir}/datasets/VVV/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
+                 #  f"{localdir}/datasets/VVV/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
                    ],
         "filter" : {
-            "samples" : ["ssWWLL", "ssWWTT", "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", "TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8"],
+            "samples" : [
+                "ssWWLL",
+                "ssWWTT",
+                "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", 
+                "TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8",
+                
+                "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", 
+                "TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8", 
+                "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8", 
+                "ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8",
+                
+            ],
         }
         }, 
     workflow=VBS_WV_Processor,
@@ -44,9 +59,9 @@ cfg = Configurator(
             get_nObj_min_or(
                 [skim_dict["Wlep_V"]["Muon"]["nMin"],skim_dict["Wlep_V"]["Electron"]["nMin"]], 
                 [skim_dict["Wlep_V"]["Muon"]["ptMin"], skim_dict["Wlep_V"]["Electron"]["ptMin"]],
-                ["Muon", "Electron"]),
+                ["Muon", "Electron"]),            
             ],
-    preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSideW, Wtransverse_mass_presel],
+    preselections=[VBS_jets_presel, semileptonic_preselW, Vjet_massSideW],
     categories= {
         "baseline" : [passthrough],
         
@@ -109,7 +124,7 @@ cfg = Configurator(
                            ColOut("CleanFatJet", ["pt", "eta", "phi", "tau1", "tau2", "tau21", "msoftdrop", "mass"], flatten=False),
                            ColOut("CleanJet", ["pt", "eta", "phi"], flatten=False),
                            ColOut("CleanJet_noVBS", ["pt", "eta", "phi"], flatten=False),
-                           ColOut("VBS_dijet_system", ["mass", "pt", "deltaEta"], flatten=False),    
+                           ColOut("VBS_dijet_system", ["mass", "pt", "deltaEta", "pt1", "pt2"], flatten=False),    
                            ColOut("V_dijet_candidate", ["mass", "pt", "deltaEta"], flatten=False),  
                            ColOut("events", ["zepp_ele", "zepp_muon", "zepp_lep"], flatten=False),
                            ColOut("events", ["MT_mu_miss", "MT_ele_miss", "MT_lep_miss"], flatten=False),
