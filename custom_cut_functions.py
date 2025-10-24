@@ -145,7 +145,8 @@ def Vjet_mass(events, params, year, sample, **kwargs):
     fj_mask = (
     (
         (events.CleanFatJet.msoftdrop > params["mass_min"]) &
-        (events.CleanFatJet.msoftdrop < params["mass_max"]) 
+        (events.CleanFatJet.msoftdrop < params["mass_max"]) & 
+        (events.CleanFatJet.tau21 < params["tau21"])
     )
     |
     (
@@ -172,6 +173,7 @@ Vjet_massW = Cut(
         "mass_min": 65,
         "mass_max": 105,
         "nJet_min" : 4,
+        "tau21":0.45,
     },
     function=Vjet_mass,
 )
