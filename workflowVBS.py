@@ -63,6 +63,9 @@ class VBS_WV_Processor(BaseProcessorABC):
             self.events.CleanFatJet.tau3/self.events.CleanFatJet.tau2,
             "tau32"
         )
+        if self._year in ["2022", "2023"]:
+            self.fix_jetID()
+        
         self.events["CleanJet"], self.CleanJetMask = jet_selection(
             self.events, "Jet", self.params, self._year,  leptons_collection="LeptonGood"
         )
@@ -231,6 +234,52 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.events["nJet"] = ak.num(self.events.Jet)
         self.events["nFatJet"] = ak.num(self.events.FatJet)
 
+    # fix for 2022 and 20023 (nanov12) 
+    # https://twiki.cern.ch/twiki/bin/viewauth/CMS/JetID13p6TeV#nanoAOD_Flags
+    def fix_jetID(self):
+        Jet = self.events.Jet
+        abs_eta = np.abs(Jet.eta)
+
+        mask1 = abs_eta <= 2.7
+        mask2 = (abs_eta > 2.7) & (abs_eta <= 3.0)
+        mask3 = abs_eta > 3.0
+        Jet_passJetIdTight = ak.zeros_like(abs_eta, dtype=bool)
+        Jet_passJetIdTight = ak.where(
+            mask1,
+            (Jet.jetId & (1 << 1)) != 0,
+            Jet_passJetIdTight
+        )
+        Jet_passJetIdTight = ak.where(
+            mask2,
+            ((Jet.jetId & (1 << 1)) != 0) & (Jet.neHEF < 0.99),
+            Jet_passJetIdTight
+        )
+        Jet_passJetIdTight = ak.where(
+            mask3,
+            ((Jet.jetId & (1 << 1)) != 0) & (Jet.neEmEF < 0.4),
+            Jet_passJetIdTight
+        )
+        Jet_passJetIdTightLepVeto = ak.where(
+            abs_eta <= 2.7,
+            Jet_passJetIdTight & (Jet.muEF < 0.8) & (Jet.chEmEF < 0.8),
+            Jet_passJetIdTight
+        )
+        Jet_jetId_updated = ak.zeros_like(Jet.jetId)
+
+        Jet_jetId_updated = ak.where(
+            Jet_passJetIdTight & ~Jet_passJetIdTightLepVeto,
+            2,
+            Jet_jetId_updated
+        )
+
+        Jet_jetId_updated = ak.where(
+            Jet_passJetIdTightLepVeto,
+            6,
+            Jet_jetId_updated
+        )
+        self.events["Jet", "jetId"] = Jet_jetId_updated
+
+
 
     def out_log(self):
         nEvents_total = self.nEvents_initial
@@ -257,3 +306,5 @@ class VBS_WV_Processor(BaseProcessorABC):
                 f"lumi={lumi}, "
                 f"nEvents_afterSkim={self.nEvents_after_skim}\n"
             )
+    
+
