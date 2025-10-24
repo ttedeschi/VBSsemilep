@@ -1,0 +1,12 @@
+btagging:
+  working_point:
+    '2023_Summer23':
+    btagging_algorithm: btagRobustParTAK4B
+    btagging_WP:
+      L: 0.0479
+      M: 0.2431
+      T: 0.6553
+      XT: 0.7667
+      XXT: 0.9459
+
+# https://btv-wiki.docs.cern.ch/ScaleFactors/Run3Summer23/#general-remarks
